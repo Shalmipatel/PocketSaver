@@ -61,3 +61,11 @@ C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\D
 C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\res\drawable\id_card_double.png
 C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\R.cs.flag
 C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\uploadflags.txt
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\bin\Debug\PocketSaver.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\bin\Debug\PocketSaver.Android.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\android\assets\PocketSaver.Android.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\android\assets\PocketSaver.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+C:\Users\Mevin\PocketSaver\src\PocketSaver\PocketSaver\PocketSaver.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb

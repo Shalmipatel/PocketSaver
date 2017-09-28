@@ -2,5 +2,6 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SelectedDevice>Genymotion Custom Phone - 6.0.0 - API 23 - 768x1280 V2</SelectedDevice>
+    <DefaultDevice>AndoidDevice</DefaultDevice>
   </PropertyGroup>
 </Project>

@@ -2,18 +2,26 @@
 
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{hyperref}
 
-\title{SE 3XA3: Development Plan\\Title of Project}
-
-\author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
 }
 
-\date{}
+\title{SE 3XA3: Development Plan\\PocketSaver}
 
-\input{../Comments}
+\author{Team 12
+		\\ Mevin Mathew, mathem1
+		\\ Shalmi Patel, patels19
+		\\ Diya Mathews, mathewsd
+}
+
+\date{September 29, 2017}
+
+%\input{../Comments}
 
 \begin{document}
 
@@ -26,7 +34,7 @@
 Date1 & Name(s) & Description of changes\\
 Date2 & Name(s) & Description of changes\\
 ... & ... & ...\\
-\bottomrule
+\bottomrule3
 \end{tabularx}
 \end{table}
 
@@ -34,25 +42,75 @@ Date2 & Name(s) & Description of changes\\
 
 \maketitle
 
-Put your introductory blurb here.
+PocketSaver will help the average person keep a record of their purchases, big or small, and promotes self-awareness of how much they spend. It will provide a solution to the problem of personal finance by keeping detailed records of everyday transactions.
 
 \section{Team Meeting Plan}
+Our team, is planning to meet up twice a week, outside lab times. The locations of these meeting will vary between the team member availability, locations will include the Hatch Building, Mills Library, Thode Library, or via skype calls. During the meetings, items such as tasks, due dates, and what was accomplished between the meetings will be discussed. Tasks that should be completed for the next meetings will also be discussed. Roles for the meetings are mentioned in “Team Member Roles” section.
 
 \section{Team Communication Plan}
+As a team, we will use various methods of communication to keep up to date with our project. We will use Facebook Messenger as our primary source to keep each other informed about the progress of the project. We will also use this as a means to remind ourselves of due dates. We will also use Git Issues to track bugs and problems within the code.
+
+\newpage
 
 \section{Team Member Roles}
+\textbf{Shalmi Patel}
+\begin{enumerate}
+  \item Leader/Chair
+  \begin{itemize}
+    \item Keeps track of upcoming deadlines and ensures project is on track
+    \item Leads group meetings
+    \item Works closely with the Scribe to ensure all topics are covered during meetings and reviews next steps for the project
+  \end{itemize}
+  \item UI Expert
+  \begin{itemize}
+    \item Leads the implementation of a user-friendly interface by using the existing open source project’s UI
+  \end{itemize}
+\end{enumerate} 
+
+\vspace{5mm}
+
+\textbf{Mevin Mathew}
+\begin{enumerate}
+  \item Git Expert
+  \begin{itemize}
+    \item Ensures the project repository is kept up to date and working
+  \end{itemize}
+  \item Backend Expert
+  \begin{itemize}
+    \item Leads the team in coding the functionality of the application
+  \end{itemize}
+\end{enumerate}
+
+\vspace{5mm}
+
+\textbf{Diya Mathews}
+\begin{enumerate}
+  \item Scribe
+  \begin{itemize}
+    \item Takes meeting minutes
+    \item Works with the Leader/Chair to write all the decisions made during the meeting and review what to do next
+  \end{itemize}
+  \item Latex/Document Expert
+  \begin{itemize}
+    \item Combines the efforts of the team into the required latex format for derivable and other documents
+  \end{itemize}
+\end{enumerate}
 
 \section{Git Workflow Plan}
+GIT will be organized from the outline that was given. We are planning to use the master branch for the code, and the developers will be using their local repos to access the branch and make edits. Then the developer can push the edits into the master repo. Commits will be done through the developers’ local repo, associated with a tag. Tags will help organize the repo better.
 
 \section{Proof of Concept Demonstration Plan}
+Throughout the development and implementation of this project, there will be a few obstacles that we will have to overcome. We will have to find a feasible, convenient, and user-friendly way to show the user the data the application collects over a period of time. One such method is through graphs, graphs are useful when showing trends of data and therefore will be useful for this situation. We will have to look to the support of online resources and our TAs to develop a graphing algorithm that will use the data the application collects and displays it in a presentable user interface. Another obstacle that we will have to overcome is testing the application. There are features of the application that graph data over a period of time. When we are testing, we will not be able to test for data over long periods of time. We can incorporate a feature where we can enter transactions from previous days. This was we will be able to store data for multiple days and test our application more accurately. This function will increase the usability of the application since it provides users the opportunity to enter transactions from the past that they forgot.
 
 \section{Technology}
+Technology that will be used for this project will include, Visual studios, GIT, Latex, emulators , android phone. These tools will help us create the most efficient application. To code the program, we will be using Visual Studio, it is a multi platform tool that will allow us to create an application on different platforms. The coding language being used in programing this application is xaml and C. GIT will help the team easily share the code and documents. Emulators and android phones, will assist the team with testing. The application will be tested on these emulators or an android phone.
 
 \section{Coding Style}
+The project is going to be coded using \href{https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html}{C} and \href{https://github.com/cmaneu/xaml-coding-guidelines/blob/master/README.mdl}{Xaml}.
 
 \section{Project Schedule}
-
-Provide a pointer to your Gantt Chart.
+%make sure to change file name accordingly
+We used a \href{run:../../ProjectSchedule/3X_Example.gann}{Gantt Chart} as a timeline to strategize deadlines for the project to keep us on track. 
 
 \section{Project Review}
 

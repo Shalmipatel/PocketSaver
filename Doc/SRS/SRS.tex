@@ -12,17 +12,17 @@
 }
 \usepackage[round]{natbib}
 
-\title{SE 3XA3: Software Requirements Specification\\Title of Project}
+\title{SE 3XA3: Software Requirements Specification\\PocketSaver}
 
-\author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+\author{Team 12, 
+		\\ Mevin Mathew , mathem1 , 400012057
+		\\ Shalmi Patel , patels19 , 400023762
+		\\ Diya Mathews , mathewsd , 400014156
 }
 
 \date{\today}
 
-\input{../Comments}
+%\input{../Comments}
 
 \begin{document}
 
@@ -32,13 +32,14 @@
 \tableofcontents
 \listoftables
 \listoffigures
+N/A
 
 \begin{table}[bp]
 \caption{\bf Revision History}
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
+10/6/2017 & 1.0 & Initial document\\
 Date 2 & 1.1 & Notes\\
 \bottomrule
 \end{tabularx}
@@ -48,88 +49,158 @@ Date 2 & 1.1 & Notes\\
 
 \pagenumbering{arabic}
 
-This document describes the requirements for ....  The template for the Software
-Requirements Specification (SRS) is a subset of the Volere
-template~\citep{RobertsonAndRobertson2012}.  If you make further modifications
-to the template, you should explicity state what modifications were made.
 
 \section{Project Drivers}
 
 \subsection{The Purpose of the Project}
-
+The purpose of this project is to help everyday consumers to keep an accurate record on their personal finances and expenses. This in turn, allows for effective money and budget management by the user to save money, and spend smarter. 
 \subsection{The Stakeholders}
-
+The stakeholders of this project are anyone who has interest in this project. This includes Professor Bokhari who is the client, the developers, Mevin Mathew, Diya Mathews, and Shalmi Patel, as well as the teaching assistants Jean Ferreira and Christopher McDonald. Other stakeholders include consumers who use the application.
 \subsubsection{The Client}
-
+The client for PocketSaver is Dr. Bokhari  as he is the one who requested this project to be completed in the first place for the course of Software Engineering 3XA3. This personal finance application is being created for this course and could be distributed to customers if the developers choose.
 \subsubsection{The Customers}
-
+The target customer for the PocketSaver is a consumer who has either an Android or an iOS device that has the space capacity to download the application onto the device. The personal finance application has a target audience of working class people who earn their own income and spend as average consumers however, it can be used by consumers of all ages.
 \subsubsection{Other Stakeholders}
-
+Christopher McDonald and Jean Ferreira who are both teaching assistants for Dr. Bokhari in the course Software Engineering 3XA3. They help both Dr. Bokhari as well as the developers during the software development process.
 \subsection{Mandated Constraints}
-
+   \begin{enumerate}
+     \item An Android Device with APK 23 and iOS version 8.0 or higher 
+     \item Enough memory space on the device to download and install
+   \end{enumerate}
 \subsection{Naming Conventions and Terminology}
-
+There are no naming conventions or terminology used in this project other than common day to day terminology for spending money. 
 \subsection{Relevant Facts and Assumptions}
-
-User characteristics should go under assumptions.
+We are assuming that the user has an Android APK 23 package or iOS 8.0 or greater as well as enough memory on their phone to download and install the app. We also assume that the user is familiar with a menu page navigation style for the application to navigate from page to page.
 
 \section{Functional Requirements}
 
 \subsection{The Scope of the Work and the Product}
+PocketSaver is based on the open source project CoCoin found on GitLab. With our project, we would like to improve on CoCoin's UI and make it more user-friendly. Much like CoCoin, this application will have an interactive interface allowing the user to enter and edit the amount of money spent. As the expenses accumulate, the application will allow the user to view the amount of money spent that day, month, year, or even longer. Users will be able to see the patterns in their spending habits by comparing their expenses day to day or month to month.
 
 \subsubsection{The Context of the Work}
+The main objective of the application is to keep track of the personal finances of the user. A database is required to keep record of transactions entered by the user. When the user wants to input a new purchase the application has to prompt the user and then take that information and store it in the database. Similarly when requested, the application can extract data from the database and present the user with detailed information of their previous finances in the form of a graph.
 
 \subsubsection{Work Partitioning}
+This application will be developed by all three members of the team. Since Mevin has the most experience is application development, he will be taking the lead and ensuring that all the backend code is implemented properly. Shalmi will be the leader for the user interface portion of the project. With the help of the rest of the team, she will be paying attention to software qualities such as usability, reliability, and correctness. Diya will ensure that all documentation is kept up-to-date and completed thoroughly and on time. Although there is one leader for each aspect of this project, all members of the team will contribute to the backend, user interface and documentation equally. 
 
 \subsubsection{Individual Product Use Cases}
+There are a couple of use case scenarios that we have to consider when developing the application. The bare minimal use cases are as follows.
+\begin{itemize}
+   \item Add Transactions
+   \begin{itemize}
+     \item Allows the user to enter the amount spent on a transaction
+     \item The entered amount must be retained for future reference
+   \end{itemize}
+   \item Display Trend of Past Transactions (Graphically)
+   \begin{itemize}
+     \item Allows the user to see all past transactions visually in the form or a graph
+     \item The graph should be adjustable to various time periods and show trends in spending habits.
+   \end{itemize}
+\end{itemize}
+
+There are a couple of use case scenarios that would make the application user-friendly. These include the following.
+\begin{itemize}
+   \item Add transaction on a previous day
+   \begin{itemize}
+     \item Allows the user to enter any transactions forgotten from the previous day
+     \item The transactions are able to be entered for any specific date, past or present (not future)
+   \end{itemize}
+   \item Edit past transactions
+   \begin{itemize}
+     \item Allows user to edit past entries of transactions in the application
+   \end{itemize}
+   \item Subtract/delete transactions
+   \begin{itemize}
+     \item Allows user to delete past transactions
+    \item Also allows user to log refunds from previous transactions
+   \end{itemize}
+\end{itemize}
 
 \subsection{Functional Requirements}
+   \begin{enumerate}
+     \item The application will allow the user to input and delete transactions on a past or current day
+     \item The application will allow the user to view previous transactions and view the trend of their previous transactions
+     \item  The application will allow the user to edit previous transactions
+     \item The application will record all inputs by the user on a database
+   \end{enumerate}
 
 \section{Non-functional Requirements}
 
 \subsection{Look and Feel Requirements}
+   \begin{enumerate}
+   \item The application should have a clean user interface
+   \begin{itemize}
+     \item This will make the navigation in the application for users to understand. With an appealing colour scheme, etc.
+   \end{itemize}
 
+   \item The application should run smoothly
+   \begin{itemize}
+     \item The application should run smoothly, with minimal wait/loading times. 
+   \end{itemize}
+\end{enumerate}
 \subsection{Usability and Humanity Requirements}
-
+   \begin{enumerate}
+   \item The application must be easy to use and easy to navigate
+   \begin{itemize}
+     \item 90\% of users should be able to find all functions of the application without help. The layout will be easy to understand, which will allow the user to navigate through the application.
+   \end{itemize}
+ \end{enumerate}
 \subsection{Performance Requirements}
+All recent transactions or edits of previous transactions should be reflected on the graph with no delay
 
 \subsection{Operational and Environmental Requirements}
+   \begin{enumerate}
+     \item The application should not take up too much storage space on a phone
+     \item The application works on both Android and iOS
+   \end{enumerate}
 
 \subsection{Maintainability and Support Requirements}
+If the application crashes, none of the data should be lost
 
 \subsection{Security Requirements}
-
+   \begin{enumerate}
+     \item The application will only store all information collected from the user on the users device 
+     \item The application will not require the user to enter any sensitive information (like credit card information etc.)
+   \end{enumerate}
 \subsection{Cultural Requirements}
-
+N/A
 \subsection{Legal Requirements}
-
+ The application is suitable for all ages, but targets those who are old enough to go shopping on their own
 \subsection{Health and Safety Requirements}
-
-This section is not in the original Volere template, but health and safety are
-issues that should be considered for every engineering project.
+N/A
 
 \section{Project Issues}
 
 \subsection{Open Issues}
+Issues that could occur with this application, would include UI adaptability. Items such as screen sizes, which change per device therefore causing page scaling issues. This may lead to having current parts of the page to be cut out. 
 
 \subsection{Off-the-Shelf Solutions}
+Here are the following off-the-shelf solutions were are going to be using: 
+   \begin{enumerate}
+     \item Android device/emulator for hosting the application 
+     \item GitLab for issue tracking and version control
+	\item Microsoft Unit Test Framework for unit testing 
+	 \item Latex for documentation generation
+	\item Visual Studio IDE, to develop application
+
+   \end{enumerate}
 
 \subsection{New Problems}
-
+Current Problem we are facing is with the master detail page and creating a navigation system for the application.
 \subsection{Tasks}
-
+The development cycle we are following is the waterfall cycle. The different tasks that need to complete to make this application successful would include, code, documentations, and unit testing. These categories are now broken up into different times, of when each is due, to stay on track. The application will be tested through several testcases, testing all features. Please refer to the \href{run:../../ProjectSchedule/3X_Example.gann}{Gantt Chart} for details on the deadlines, etc.
 \subsection{Migration to the New Product}
-
+The migration to the new product, is mostly on the UI. At the moment, CoCoin has many flaws within the UI. The improvements would include better flow, layout, outputs, and input changes. 
 \subsection{Risks}
-
+Risks involving that application, would involve the database. The database can crash, and this could lead to a possibility of losing data. Another issue would be not having access to the database, which leads to losing data that was entered through the application.
 \subsection{Costs}
-
+The Project will have a budget of \$0. All the resources that will be used during the project are free of charge. 
 \subsection{User Documentation and Training}
-
+This application will not have a form of user documentation. The team’s goal is to make this application easy to use, therefore the user will pick up the application flow quickly. 
 \subsection{Waiting Room}
-
+After implementing change to CoCoin, other features that we can add is user accounts, where the data can be saved into an account. The accounts would allow to log in and out from varies platforms. Another feature that we can add, is access to the accounts through a web browsers, which will allow the user to see data on a computer. 
 \subsection{Ideas for Solutions}
-
+The team should start off with making a page to page layout of how the application is going to flow, thus removing all the clutter and confusion with the navigation system. Then continue to implement it. This will help organize the teams thoughts.
 \bibliographystyle{plainnat}
 
 \bibliography{SRS}
@@ -137,14 +208,9 @@ issues that should be considered for every engineering project.
 \newpage
 
 \section{Appendix}
-
-This section has been added to the Volere template.  This is where you can place
-additional information.
+N/A
 
 \subsection{Symbolic Parameters}
-
-The definition of the requirements will likely call for SYMBOLIC\_CONSTANTS.
-Their values are defined in this section for easy maintenance.
-
+N/A
 
 \end{document}

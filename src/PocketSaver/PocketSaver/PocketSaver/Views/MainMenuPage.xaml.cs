@@ -1,10 +1,8 @@
 ﻿using PocketSaver.Models;
-using System;
-using System.Collections.Generic;
+using PocketSaver.Views.Home;
+using PocketSaver.Views.Settings;
+using PocketSaver.Views.Transaction;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -33,15 +31,42 @@ namespace PocketSaver.Views
 
             modulesGroup.Add(new MasterPageItem
             {
-                Title = "About",
-                IconSource = "calendar_2.png",
-                TargetType = typeof(AboutPage),
+                Title = "Home",
+                IconSource = "home.png",
+                TargetType = typeof(HomePage),
                 TintColor = Color.DodgerBlue,
                 TextColor = Color.Black
             });
 
+            modulesGroup.Add(new MasterPageItem
+            {
+                Title = "Transaction Summary",
+                IconSource = "coin_bank_note.png",
+                TargetType = typeof(TransactionPage),
+                TintColor = Color.LimeGreen,
+                TextColor = Color.Black
+            });
 
-            masterPageItems.Add(modulesGroup);
+            systemGroup.Add(new MasterPageItem
+            {
+                Title = "About",
+                IconSource = "information_circle.png",
+                TargetType = typeof(AboutPage),
+                TintColor = Color.Black,
+                TextColor = Color.Black
+            });
+
+            systemGroup.Add(new MasterPageItem
+            {
+                Title = "Settings",
+                IconSource = "cog.png",
+                TargetType = typeof(SettingsPage),
+                TintColor = Color.DimGray,
+                TextColor = Color.Black
+            });
+
+
+            masterPageItems.Add(modulesGroup); masterPageItems.Add(systemGroup);
             listView.ItemsSource = masterPageItems;
         }
     }

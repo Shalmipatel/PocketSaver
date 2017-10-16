@@ -10,7 +10,9 @@ using Xamarin.Forms.Xaml;
 
 namespace PocketSaver.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    /// <summary>
+    /// Class for the MasterDetail page.
+    /// </summary>
     public partial class MainMasterDetailPage : MasterDetailPage
     {
         /// <summary>
@@ -27,6 +29,12 @@ namespace PocketSaver.Views
             var item = e.SelectedItem as MasterPageItem;
             if (item != null)
             {
+                switch (item.Title)
+                {
+                    default:
+                        Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                        break;
+                }
                 MainMenuPage.ListView.SelectedItem = null;
                 IsPresented = false;
             }

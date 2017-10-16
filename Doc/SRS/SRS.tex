@@ -71,7 +71,7 @@ Christopher McDonald and Jean Ferreira who are both teaching assistants for Dr. 
 \subsection{Naming Conventions and Terminology}
 There are no naming conventions or terminology used in this project other than common day to day terminology for spending money. 
 \subsection{Relevant Facts and Assumptions}
-We are assuming that the user has an Android APK 23 package or iOS 8.0 or greater as well as enough memory on their phone to download and install the app. We also assume that the user is familiar with a menu page navigation style for the application to navigate from page to page.
+We are assuming that the user has an Android APK 23 package or iOS 8.0 or greater as well as enough memory on their phone to download and install the app. We also assume that the user is familiar with a menu page navigation style for the application to navigate from page to page. % I only really like the last assumption, App store will handle matching version requirements. Plus, you have already said you require them to have that version, no need to assume as they would all have it.
 
 \section{Functional Requirements}
 
@@ -99,7 +99,7 @@ There are a couple of use case scenarios that we have to consider when developin
    \end{itemize}
 \end{itemize}
 
-There are a couple of use case scenarios that would make the application user-friendly. These include the following.
+There are a couple of use case scenarios that would make the application user-friendly. These include the following. % include any ones not in the software in a likely changes section
 \begin{itemize}
    \item Add transaction on a previous day
    \begin{itemize}
@@ -119,44 +119,44 @@ There are a couple of use case scenarios that would make the application user-fr
 
 \subsection{Functional Requirements}
    \begin{enumerate}
-     \item The application will allow the user to input and delete transactions on a past or current day
-     \item The application will allow the user to view previous transactions and view the trend of their previous transactions
+     \item The application will allow the user to input and delete transactions on a past or current day % be more atomic!
+     \item The application will allow the user to view previous transactions and view the trend of their previous transactions % atomic
      \item  The application will allow the user to edit previous transactions
-     \item The application will record all inputs by the user on a database
+     \item The application will record all inputs by the user on a database % better to say user's data persists over sessions, more abstract
    \end{enumerate}
 
 \section{Non-functional Requirements}
 
 \subsection{Look and Feel Requirements}
    \begin{enumerate}
-   \item The application should have a clean user interface
+   \item The application should have a clean user interface % how to measure and validate?
    \begin{itemize}
      \item This will make the navigation in the application for users to understand. With an appealing colour scheme, etc.
    \end{itemize}
 
    \item The application should run smoothly
    \begin{itemize}
-     \item The application should run smoothly, with minimal wait/loading times. 
+     \item The application should run smoothly, with minimal wait/loading times. % what is minimal?
    \end{itemize}
 \end{enumerate}
 \subsection{Usability and Humanity Requirements}
    \begin{enumerate}
    \item The application must be easy to use and easy to navigate
    \begin{itemize}
-     \item 90\% of users should be able to find all functions of the application without help. The layout will be easy to understand, which will allow the user to navigate through the application.
+     \item 90\% of users should be able to find all functions of the application without help. The layout will be easy to understand, which will allow the user to navigate through the application. % nice!!!!!
    \end{itemize}
  \end{enumerate}
 \subsection{Performance Requirements}
-All recent transactions or edits of previous transactions should be reflected on the graph with no delay
+All recent transactions or edits of previous transactions should be reflected on the graph with no delay % this is literally impossible
 
 \subsection{Operational and Environmental Requirements}
    \begin{enumerate}
-     \item The application should not take up too much storage space on a phone
+     \item The application should not take up too much storage space on a phone % how much is too much?
      \item The application works on both Android and iOS
    \end{enumerate}
 
 \subsection{Maintainability and Support Requirements}
-If the application crashes, none of the data should be lost
+If the application crashes, none of the data should be lost % tough to test, think more of ACID transactions when making this stuff
 
 \subsection{Security Requirements}
    \begin{enumerate}
@@ -176,7 +176,7 @@ N/A
 Issues that could occur with this application, would include UI adaptability. Items such as screen sizes, which change per device therefore causing page scaling issues. This may lead to having current parts of the page to be cut out. 
 
 \subsection{Off-the-Shelf Solutions}
-Here are the following off-the-shelf solutions were are going to be using: 
+Here are the following off-the-shelf solutions were are going to be using:  % refer more to the problem above
    \begin{enumerate}
      \item Android device/emulator for hosting the application 
      \item GitLab for issue tracking and version control
@@ -189,11 +189,11 @@ Here are the following off-the-shelf solutions were are going to be using:
 \subsection{New Problems}
 Current Problem we are facing is with the master detail page and creating a navigation system for the application.
 \subsection{Tasks}
-The development cycle we are following is the waterfall cycle. The different tasks that need to complete to make this application successful would include, code, documentations, and unit testing. These categories are now broken up into different times, of when each is due, to stay on track. The application will be tested through several testcases, testing all features. Please refer to the \href{run:../../ProjectSchedule/3X_Example.gann}{Gantt Chart} for details on the deadlines, etc.
+The development cycle we are following is the waterfall cycle. The different tasks that need to complete to make this application successful would include, code, documentations, and unit testing. These categories are now broken up into different times, of when each is due, to stay on track. The application will be tested through several test cases, testing all features. Please refer to the \href{run:../../ProjectSchedule/3X_Example.gann}{Gantt Chart} for details on the deadlines, etc.
 \subsection{Migration to the New Product}
 The migration to the new product, is mostly on the UI. At the moment, CoCoin has many flaws within the UI. The improvements would include better flow, layout, outputs, and input changes. 
 \subsection{Risks}
-Risks involving that application, would involve the database. The database can crash, and this could lead to a possibility of losing data. Another issue would be not having access to the database, which leads to losing data that was entered through the application.
+Risks involving that application, would involve the database. The database can crash, and this could lead to a possibility of losing data. Another issue would be not having access to the database, which leads to losing data that was entered through the application. % is this an external db? cause that conflicts with a requirement you set...
 \subsection{Costs}
 The Project will have a budget of \$0. All the resources that will be used during the project are free of charge. 
 \subsection{User Documentation and Training}

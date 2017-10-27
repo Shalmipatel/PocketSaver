@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace PocketSaver.Views
 {
+    
     /// <summary>
     /// Class for the MasterDetail page.
     /// </summary>

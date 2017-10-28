@@ -1,0 +1,401 @@
+\documentclass[12pt, titlepage]{article}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=red,
+    urlcolor=blue
+}
+\usepackage[round]{natbib}
+
+\title{SE 3XA3: Development Plan\\PocketSaver}
+
+\author{Team 12
+		\\ Mevin Mathew, mathem1
+		\\ Shalmi Patel, patels19
+		\\ Diya Mathews, mathewsd
+}
+
+\date{\today}
+
+\input{../Comments}
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
+
+\begin{table}[bp]
+\caption{\bf Revision History}
+\begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
+\toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
+\midrule
+10/27/2017 & 1.0 & Initial\\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\pagenumbering{arabic}
+
+This document is to describe to Testing Plan for the PocketSaver mobile application for iOS and Android
+
+\section{General Information}
+
+\subsection{Purpose}
+The purpose of testing this project is to confirm all requirements that were outlined in the Requirements Specifications as well as check whether or not the requirements are met or not. This also helps to determine if the application is implemented correctly.
+
+\subsection{Scope}
+In order to test the re-implementation of CoCoin into the PocketSaver application, the test plan provides a basis and structure for the testing that is to transpire. Its objective is to prove that PocketSaver has met its requirements as specified in the Requirement Document as well as create metrics to the requirements so that the requirements specified are quantifiable. The testing plan allows for a means and structure for the testing on PocketSaver. This document will also provide what is to be tested of the application and outline testing methods as well as tools that are to be utilized for testing.
+
+\subsection{Acronyms, Abbreviations, and Symbols}
+There are no acronyms, abbreviations or symbols that will be used throughout this document that need to be highlighted. 
+	
+\subsection{Overview of Document}
+The PocketSaver application will re-implement the project CoCoin from GitHub. The application will allow the user to enter daily personal finances in order to keep a detailed record of their transactions in everyday life. All of the applications software requirements can be referred to in the \href{run:../SRS/SRS.pdf}{Requirements Document}. This document demonstrates how the personal finance application PocketSaver will be tested, the testing schedule, and the tools that are utilized for testing.
+
+\section{Plan}
+	
+\subsection{Software Description}
+
+\begin{center}
+\begin{adjustbox}{width=\textwidth,totalheight=\textheight,keepaspectratio}
+\begin{tabular}{ |c| c| c| }
+\hline
+Inputs & Outputs & Functions of Software being tested \\ 
+\hline
+ Enter new entry for expense & Transaction page is updated & Transaction page is updated, Accurate\\ 
+ \hline
+Enter new entry for expense & Graphs are updated & Graphs are updated, Graphs are accurate, Graphs and transaction pages match\\
+\hline
+Enter new entry for expense& Database is updated & Database is updated \\ 
+\hline
+Enter new entry for expense& Total expense updated & Total expense updates \\ 
+\hline
+&  &Smooth transition between pages \\ 
+\hline
+\end{tabular}
+\end{adjustbox}
+
+\end{center}
+
+\subsection{Test Team}
+The team as a whole will be responsible for testing. Please refer to the gantt chart for more details and responsibilities of the testing.
+
+\subsection{Automated Testing Approach}
+We will be using Microsoft Unit Test Framework for unit testing. Microsoft Unit testing works well with MStest, which makes it easy to test with the application. The unit testing will run the program and compare the output values with the expected values.
+\subsection{Testing Tools}
+Testing tools that will used is MStesting unit. It is a automated testing unit.
+\subsection{Testing Schedule}
+Refer to Gantt chart for the testing Schedule, \href{run:../../ProjectSchedule/Gantt Chart.gan}{Gantt Chart} 
+
+\section{System Test Description}
+	
+\subsection{Tests for Functional Requirements} \label{section:31}
+
+\subsubsection{Area of Testing1}
+		
+\paragraph{Title for Test}
+
+\begin{enumerate}
+
+\item{test-id1\\}
+
+inputTest-id1 : Testing if user’s input is being received
+\newline
+Type: Functional, Dynamic, Automatic
+\newline
+Initial State: Application is on the enter transaction page
+\newline
+Input/Condition: User inputs their transaction details and clicks Enter
+\newline
+Output/Result: The transaction should update the database 
+\newline
+How test will be performed: When user enters a new transaction the database should update and should have accurate data. We will use unit testing to ensure the data in the database matches the information provided by the user.
+
+					
+\item{test-id2\\}
+
+inputTest-id2 : Testing if user is able to modify entries
+\newline
+Type: Functional, Dynamic, Automatic
+\newline
+Initial State: Database has at least one transaction
+\newline
+Input/Condition: User selects an existing transaction and modifies a parameter
+\newline
+Output/Result: Modified transaction should update according to the modifications in the database
+\newline
+How test will be performed: When user modifies an existing transaction the database should update and should have accurate data. We will use unit testing to ensure the data in the database matches the modification the user inputted.
+
+\item{test-id3\\}
+
+inputTest-id3 : Testing if user is able to delete entries
+\newline
+Type: Functional, Dynamic
+\newline
+Initial State: Database has at least one transaction
+\newline
+Input/Condition: User selects an existing transaction and deletes it
+\newline
+Output/Result: Deleted transaction should not appear within database
+\newline
+How test will be performed: When user deletes an existing transaction the database should update and correspondingly delete that entry. We will use unit testing to ensure the data in the database matching the deleted transaction is removed.
+
+
+\end{enumerate}
+
+\subsubsection{Application Output}
+\begin{enumerate}
+\item{App-test-id1\\}
+outputTest-id1 : Testing if the graph is up-to-date and has no delay
+\newline
+Type: Functional, Dynamic, Manual
+\newline
+Initial State: Database has at least one transaction
+\newline
+Input/Condition: User enters a new transaction
+\newline
+Output/Result: Entered transaction should appear on graph
+\newline
+How test will be performed: When user enters a new transaction the graph should update and should have accurate data. We will view the graph and ensure that the information is accurate and without delay manually.
+
+\item{App-test-id2\\}
+outputTest-id2 : Testing if the total amount spent is up-to-date and has no delay
+\newline
+Type: Functional, Dynamic
+\newline
+Initial State: Database has at least one transaction
+\newline
+Input/Condition: User enters a new transaction
+\newline
+Output/Result: Entered transaction should appear in database
+\newline
+How test will be performed: When user enters a new transaction the total expenses should update and should have accurate data. We will manually view the total expenses amount and ensure that it is accurately updated and without delay.
+
+\item{App-test-id3\\}
+outputTest-id3 : Testing if the transaction page is up-to-date and has no delay
+\newline
+Type: Functional, Dynamic
+\newline
+Initial State: Database has at least one transaction
+\newline
+Input/Condition: User enters a new transaction
+\newline
+Output/Result: Entered transaction should appear in database
+\newline
+How test will be performed: When user enters a new transaction the transaction page should update and should have accurate data.  We will view the transaction page manually and ensure that the inputted information is accurately displayed and without delay.
+
+\end{enumerate}
+
+\subsection{Tests for Nonfunctional Requirements}
+
+\subsubsection{Look and Feel}
+\begin{enumerate}
+\item{lookTest-id1\\}
+lookTest-id1 : This will be tested by survey question ~\ref{question:q2}.
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+
+\end{enumerate}
+
+
+\subsubsection{Usability and Humanity Requirements}
+\begin{enumerate}
+\item{usabilityTest-id1\\}
+usabilityTest-id1 : This will be tested by survey question ~\ref{question:q1}
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+\item{usabilityTest-id2\\}
+usabilityTest-id2 : This will be tested by survey question ~\ref{question:q6}
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+
+\end{enumerate}
+
+\subsubsection{Performance Requirements}
+\begin{enumerate}
+\item{performanceTest-id1\\}
+performanceTest-id1 : This will be tested by survey question ~\ref{question:q3}
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+
+\item{performanceTest-id2\\}
+performanceTest-id2 : This will be tested by survey question ~\ref{question:q4}
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+\item{performanceTest-id3\\}
+performanceTest-id3 : This will be tested by survey question ~\ref{question:q5}
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+
+\end{enumerate}
+
+\subsubsection{Security Requirements}
+\begin{enumerate}
+\item{legalTest-id1\\}
+legalTest-id1 : This will be tested by survey question ~\ref{question:q9}
+\newline
+	Pass: An average of 90\% of surveys say no
+
+\end{enumerate}
+
+\subsubsection{ Legal Requirements}
+\begin{enumerate}
+\item{securityTest-id1\\}
+securityTest-id1 : This will be tested by survey question ~\ref{question:q7}
+\newline
+	Pass: An average of 90\% rating (4.5/5)
+
+
+\end{enumerate}
+
+\subsection{Traceability Between Test Cases and Requirements}
+All of our test cases are designed so that by satisfying them, the requirements will also be satisfied. All the functional requirements will be tested as mentioned in section ~\ref{section:31} of this document. All non-functional requirements will be tested using a survey ~\ref{survey:1} to assess whether they are satisfied.
+
+\section{Tests for Proof of Concept}
+
+\subsection{Page Flow}
+
+\begin{enumerate}
+
+\item{flow-test-id1\\}
+flow-test-id1 : Open application
+\newline
+Type: manual 
+\newline
+Initial state: On Load 
+\newline
+Input: none
+\newline
+Output : Main page is loaded 
+\newline
+How test will be performed: User clicks on application button, which will launch the application, and then display the main page. 
+
+
+
+					
+\item{flow-test-id2\\}
+flow-test-id1 : Flow to transaction page
+\newline
+Type: Dynamic
+\newline
+Initial State: home page 
+\newline
+Input: None
+\newline
+Output: Transaction page is loaded after the home page 
+\newline
+How test will be performed:  user will click on transaction page, while will lead the user to the transaction page. 
+
+
+
+\end{enumerate}
+
+\subsection{DataBase Testing}
+
+\begin{enumerate}
+
+\item{DB-test-id1\\}
+DB-test-id1 : Adding transaction
+\newline
+Type: Manual
+\newline
+Initial State: database is up-to-date 
+\newline
+Input: transaction 
+\newline
+Output: database is updated, and transaction page is updated
+\newline
+How test will be performed:  This will be tested through Microsoft Unit Testing.
+
+
+					
+\item{DB-test-id2\\}
+DB-test-id2 : Deleting transaction
+\newline
+Type: Manual
+\newline
+Initial State: transaction exists in database
+\newline
+Input: none
+\newline
+Output: Transaction is deleted from the database, and transaction page 
+\newline
+How test will be performed:  user will select a transaction, and click the delete button. Which will delete the transactions on screen.
+
+\item{DB-test-id3\\}
+DB-test-id3 : Editing transaction 
+\newline
+Type: Manual
+\newline
+Initial State: Transaction page
+\newline
+Input: None
+\newline
+Output: transaction is updated 
+\newline
+How test will be performed:  Through Microsoft Unit testing , a transaction will edited, and updated in the database.
+\end{enumerate}
+
+
+\section{Comparison to Existing Implementation}	
+				
+\section{Unit Testing Plan}
+The Microsoft Unit Test framework will be used to implement the unit testing for this project. This does not require any further downloads or installations because the Microsoft Unit Test framework comes installed with Microsoft Visual Studio 2017 Community Edition. 
+		
+\subsection{Unit testing of internal functions}
+
+To unit test the internal functions of the PocketSaver application, the values of the API will need to be checked in order to verify that those are the correct values that are saved in the database. For example, if a user inputs a transaction, the database needs to be checked and verified that the data was inputted correctly. For any functions that have a return (example: a total expense calculation), any test cases that have the proper input provided as well as expected output will suffice in terms of testing the function. We know that all functions cannot be tested and therefore our aim is to have about 40\% of the functions to be unit tested while the others are tested manually.
+		
+\subsection{Unit testing of output files}	
+Since the PocketSaver application does not produce an output file, there not a need to test in this area. There will be no unit testing of the output since display will be a direct output of the internal functions that are being run by the application in the background.	
+
+\bibliographystyle{plainnat}
+
+\bibliography{SRS}
+
+\newpage
+
+\section{Appendix}
+
+
+\subsection{Symbolic Parameters}
+N/A
+
+\subsection{Usability Survey Questions?}  \label{survey:1}
+Please provide a rating from 1 to 5 for the following statements (1 - Strongly Disagree, 2 - Disagree, 3 - Neutral, 4 - Agree, 5 - Strongly Agree) : 
+The application is easy to navigate and easy to use.
+\begin{enumerate}
+
+\item The colour scheme is visually appealing.\label{question:q1}
+\item Entering/modifying/deleting transactions are reflected on the total amount spent with little to no delay\label{question:q2}
+\item Entering/modifying/deleting transactions are reflected on the transaction page with little to no delay\label{question:q3}
+\item Entering/modifying/deleting transactions are reflected on the graph with little to no delay\label{question:q4}
+\item The application runs smoothly and with minimal wait/loading time.\label{question:q5}
+\item I was comfortable with entering all information that the application asked me to.\label{question:q6}
+\item Please provide detailed answers for the following questions (point-form is acceptable)\label{question:q7}
+\item Does the application run smoothly on your device? Please indicate the device you used.\label{question:q8}
+\item Were you offended by anything in this game? Please provide details\label{question:q9}
+\item Is there anything you feel is missing or could be improved in this application?\label{question:q10}
+\end{enumerate}
+
+\end{document}

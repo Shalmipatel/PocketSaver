@@ -1,11 +1,11 @@
-# Project Name
+# PocketSaver
 
 Team Name: ?
 
-Team Members: ?, ?, ?
+Team Members: Shalmi Patel, Mevin Mathew, Diya Mathews
 
 
-This project is a reimplementation of ...
+This project is a reimplementation of the CoCoin OpenSource project on GitHub.
 
 The folders and files for this project are as follows:
 

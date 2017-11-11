@@ -42,7 +42,7 @@ namespace PocketSaver.Views
             {
                 Title = "Transaction Summary",
                 IconSource = "coin_bank_note.png",
-                TargetType = typeof(TransactionPage),
+                TargetType = typeof(TransactionListPage),
                 TintColor = Color.LimeGreen,
                 TextColor = Color.Black
             });

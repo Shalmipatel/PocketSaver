@@ -29,12 +29,12 @@
 \newcommand{\mthemnum}{M\themnum}
 \newcommand{\mref}[1]{M\ref{#1}}
 
-\title{SE 3XA3: Software Requirements Specification\\Title of Project}
+\title{SE 3XA3: Software Requirements Specification\\PocketSaver}
 
-\author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+\author{Team 12, 
+		\\ Mevin Mathew , mathem1 , 400012057
+		\\ Shalmi Patel , patels19 , 400023762
+		\\ Diya Mathews , mathewsd , 400014156
 }
 
 \date{\today}
@@ -69,14 +69,14 @@ Date 2 & 1.1 & Notes\\
 
 Decomposing a system into modules is a commonly accepted approach to developing
 software.  A module is a work assignment for a programmer or programming
-team~\citep{ParnasEtAl1984}.  We advocate a decomposition
-based on the principle of information hiding~\citep{Parnas1972a}.  This
+team (Parnas et al., 1984).  We advocate a decomposition
+based on the principle of information hiding (Parnas, 1972).  This
 principle supports design for change, because the ``secrets'' that each module
 hides represent likely future changes.  Design for change is valuable in SC,
 where modifications are frequent, especially during initial development as the
 solution space is explored.  
 
-Our design follows the rules layed out by \citet{ParnasEtAl1984}, as follows:
+Our design follows the rules layed out by Parnas et al. (1984), as follows:
 \begin{itemize}
 \item System details that are likely to change independently should be the
   secrets of separate modules.
@@ -132,11 +132,9 @@ adapted here is called design for
 change.
 
 \begin{description}
-\item[\refstepcounter{acnum} \actheacnum \label{acHardware}:] The specific
-  hardware on which the software is running.
-\item[\refstepcounter{acnum} \actheacnum \label{acInput}:] The format of the
-  initial input data.
-\item ...
+\item[\refstepcounter{acnum} \actheacnum \label{ac1}:] The hardware on which the software is running.
+\item[\refstepcounter{acnum} \actheacnum \label{ac2}:] Application user interface layout on various devices (Responsivity).
+\item[\refstepcounter{acnum} \actheacnum \label{ac3}:] User interface appearance and colour scheme.
 \end{description}
 
 \subsection{Unlikely Changes} \label{SecUchange}
@@ -149,11 +147,10 @@ will potentially need to be modified. Hence, it is not intended that these
 decisions will be changed.
 
 \begin{description}
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] There will always be
-  a source of input data external to the software.
-\item ...
+\item[\refstepcounter{ucnum} \uctheucnum \label{uc1}:] Input device (On screen keyboard).
+\item[\refstepcounter{ucnum} \uctheucnum \label{uc2}:] Output device (device screen).
+\item[\refstepcounter{ucnum} \uctheucnum \label{uc3}:] Transaction entries updating and new entries logic.
+\item[\refstepcounter{ucnum} \uctheucnum \label{uc4}:] Total expense calculation logic.
 \end{description}
 
 \section{Module Hierarchy} \label{SecMH}
@@ -164,8 +161,22 @@ below, which are leaves in the hierarchy tree, are the modules that will
 actually be implemented.
 
 \begin{description}
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module
-\item ...
+\item [\refstepcounter{mnum} \mthemnum \label{m1}:] CustomImageCell Module
+\item [\refstepcounter{mnum} \mthemnum \label{m2}:] Transaction Model Module
+\item [\refstepcounter{mnum} \mthemnum \label{m3}:] ApiSV Module
+\item [\refstepcounter{mnum} \mthemnum \label{m4}:] HomePage ViewModel Module
+\item [\refstepcounter{mnum} \mthemnum \label{m5}:] TransactionPage ViewModel Module
+\item [\refstepcounter{mnum} \mthemnum \label{m6}:] SettingsPage ViewModel Module
+\item [\refstepcounter{mnum} \mthemnum \label{m7}:] PageActivityIndicator Module
+\item [\refstepcounter{mnum} \mthemnum \label{m8}:] TintedImage Module
+\item [\refstepcounter{mnum} \mthemnum \label{m9}:] TransactionListCell Module
+\item [\refstepcounter{mnum} \mthemnum \label{m10}:] TransactionListPage
+\item [\refstepcounter{mnum} \mthemnum \label{m11}:] AboutPage Module
+\item [\refstepcounter{mnum} \mthemnum \label{m12}:] HomePage Module
+\item [\refstepcounter{mnum} \mthemnum \label{m13}:] GroupedMasterPageItem Module
+\item [\refstepcounter{mnum} \mthemnum \label{m14}:] MasterPageItem Module
+\item [\refstepcounter{mnum} \mthemnum \label{m15}:] MainMasterDetailPage Module
+\item [\refstepcounter{mnum} \mthemnum \label{m16}:] MainMenuPage Module
 \end{description}
 
 
@@ -176,22 +187,27 @@ actually be implemented.
 \textbf{Level 1} & \textbf{Level 2}\\
 \midrule
 
-{Hardware-Hiding Module} & ~ \\
+{Hardware-Hiding Module} & CustomImageCell Module \\
+& TintedImage Module\\
+& GroupedMasterPageItem Module\\
+& MasterPageItem Module\\
+& MainMasterDetailPage Module\\
+& MainMenuPage Module\\
 \midrule
 
-\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\
-& ?\\ 
-& ?\\
+\multirow{7}{0.3\textwidth}{Behaviour-Hiding Module} & Transaction Model Module\\
+& ApiSV Module\\
+& Home ViewModel Module\\
+& Transaction ViewModel Module\\
+& Settings ViewModel Module\\
+& PageActivityIndicator Module\\
+& TransactionList Cell Module\\ 
+& TransactionListPage Module\\
+& AboutPage Module\\
+& HomePage Module\\
 \midrule
 
-\multirow{3}{0.3\textwidth}{Software Decision Module} & {?}\\
-& ?\\
-& ?\\
+\multirow{1}{0.3\textwidth}{Software Decision Module} & {}\\
 \bottomrule
 
 \end{tabular}
@@ -223,55 +239,106 @@ that the module is not a leaf and will not have to be implemented. Whether or
 not this module is implemented depends on the programming language
 selected.
 
-\subsection{Hardware Hiding Modules (\mref{mHH})}
-
+\subsection{Hardware Hiding Modules}
+\subsubsection{CustomImageCell Module(\mref{m1})}
 \begin{description}
-\item[Secrets:]The data structure and algorithm used to implement the virtual
-  hardware.
-\item[Services:]Serves as a virtual hardware used by the rest of the
-  system. This module provides the interface between the hardware and the
-  software. So, the system can use it to display outputs or to accept inputs.
-\item[Implemented By:] OS
+\item[Secrets:]Get colours from module
+\item[Services:]Allows custom cells to have tinted images
+\item[Implemented By:] CustomImageCell.cs
+\end{description}
+
+\subsubsection{TintedImage Module(\mref{m7})}
+\begin{description}
+\item[Secrets:]Get colours from module
+\item[Services:]A custom image that allows for image colour tinting for the main menu images and various other pages
+\item[Implemented By:] TintedImage.cs
+\end{description}
+
+\subsubsection{GroupedMasterPageItem Module(\mref{m13})}
+\begin{description}
+\item[Secrets:]How the MasterPageItem is grouped together
+\item[Services:]Groups the items in the master page into Modules for the MainMenuPage list
+\item[Implemented By:] GroupedMasterPageItem.cs
+\end{description}
+
+\subsubsection{MasterPageItem Module(\mref{m14})}
+\begin{description}
+\item[Secrets:]How each page is created for each view
+\item[Services:]Determines the instances of pages to be loaded upon user selection
+\item[Implemented By:] MasterPageItem.cs
+\end{description}
+
+\subsubsection{MainMasterDetailPage Module(\mref{m15})}
+\begin{description}
+\item[Secrets:]How the navigation flows from page to page using MasterDetail layout
+\item[Services:]Displays the master detail format for the pages of the application
+Module that creates an instance of a master detail format for the pages
+\item[Implemented By:]  MainMasterDetailPage.xaml, MainMasterDetailPage.cs
+\end{description}
+
+\subsubsection{MainMenuPage Module(\mref{m16})}
+\begin{description}
+\item[Secrets:]How the MainMenu is laid out
+\item[Services:]Module that displays the list of all pages within the application
+\item[Implemented By:] MainMenuPage.xaml, MainMenuPage.cs
 \end{description}
 
 \subsection{Behaviour-Hiding Module}
-
+\subsubsection{ApiSV Module(\mref{m3})}
 \begin{description}
-\item[Secrets:]The contents of the required behaviours.
-\item[Services:]Includes programs that provide externally visible behaviour of
-  the system as specified in the software requirements specification (SRS)
-  documents. This module serves as a communication layer between the
-  hardware-hiding module and the software decision module. The programs in this
-  module will need to change if there are changes in the SRS.
-\item[Implemented By:] --
+\item[Secrets:] How the GET and POST requests are made
+\item[Services:] API Service that allows the application to use GET and POST requests to retrieve and add data to the online database
+\item[Implemented By:] ApiSV.cs
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
-
+\subsubsection{Home ViewModel Module(\mref{m4})}
 \begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
+\item[Secrets:] Data Retrieval from the ApiSV module
+\item[Services:] Does all back end data retrieval for the Home page to be used within the HomePage view
+\item[Implemented By:] HomeViewModel.cs
 \end{description}
 
-\subsubsection{Etc.}
-
-
-\subsection{Software Decision Module}
-
+\subsubsection{Transaction ViewModel Module(\mref{m5})}
 \begin{description}
-\item[Secrets:] The design decision based on mathematical theorems, physical
-  facts, or programming considerations. The secrets of this module are
-  \emph{not} described in the SRS.
-\item[Services:] Includes data structure and algorithms used in the system that
-  do not provide direct interaction with the user. 
-  % Changes in these modules are more likely to be motivated by a desire to
-  % improve performance than by externally imposed changes.
-\item[Implemented By:] --
+\item[Secrets:] Data Retrieval from the ApiSV module
+\item[Services:] Does all of the back end data retrieval for the TransactionPage view
+\item[Implemented By:] TransactionViewModel.cs
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{SettingsPage ViewModel Modulee(\mref{m6})}
+\begin{description}
+\item[Secrets:] Data Retrieval from the ApiSV
+\item[Services:] Saves any local settings created by the user to be used for the SettingsPage view
+\item[Implemented By:] SettingsViewModel.cs
+\end{description}
+
+\subsubsection{TransactionList Cell Module (\mref{m9})}
+\begin{description}
+\item[Secrets:] How the ListCell is formatted for the ListView in the TransactionListPage
+\item[Services:] Displays the data for each transaction as a specific format determined by the developer
+\item[Implemented By:] TransactionListCell.cs
+\end{description}
+
+\subsubsection{TransactionListPage Module (\mref{m10})} 
+\begin{description} 
+\item[Secrets:] How the data is displayed from the Transaction ViewModel 
+\item[Services:] Displaying the data from the TransactionViewModel onto the UI View for the user
+\item[Implemented By:] TransactionListPage.xaml, TransactionListPage.cs 
+\end{description}
+
+\subsubsection{AboutPage Module(\mref{m11})}
+\begin{description} 
+\item[Secrets:] N/A 
+\item[Services:] Dispays the title, version and brief description of the PocketSaver Application 
+\item[Implemented By:] AboutPage.xaml, AboutPage.cs 
+\end{description}
+
+\subsubsection{HomePage Module (\mref{m12})} 
+\begin{description}
+\item[Secrets:] How data is displayed from the HomePageViewModel to the UI view
+\item[Services:] Displays the data from the HomePageViewModel to the UI View for the user
+\item[Implemented By:] HomePage.xaml, HomePage.cs 
+\end{description}
 
 \section{Traceability Matrix} \label{SecTM}
 
@@ -286,17 +353,10 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+FR1 & \mref{m9}, \mref{m7}\\
+FR2 & \mref{m9}, \mref{m7}, \mref{m11}, \mref{m12}\\
+FR3 & \mref{m7}, \mref{m11}, \mref{m12}\\
+FR4 & \mref{m7}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
@@ -309,18 +369,9 @@ R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
 \toprule
 \textbf{AC} & \textbf{Modules}\\
 \midrule
-\acref{acHardware} & \mref{mHH}\\
-\acref{acInput} & \mref{mInput}\\
-\acref{acParams} & \mref{mParams}\\
-\acref{acVerify} & \mref{mVerify}\\
-\acref{acOutput} & \mref{mOutput}\\
-\acref{acVerifyOut} & \mref{mVerifyOut}\\
-\acref{acODEs} & \mref{mODEs}\\
-\acref{acEnergy} & \mref{mEnergy}\\
-\acref{acControl} & \mref{mControl}\\
-\acref{acSeqDS} & \mref{mSeqDS}\\
-\acref{acSolver} & \mref{mSolver}\\
-\acref{acPlot} & \mref{mPlot}\\
+\acref{ac1} & \mref{m1}, \mref{m2}, \mref{m4}, \mref{m5}, \mref{m6}, \mref{m10}, \mref{m16}\\
+\acref{ac2} & \mref{m4}, \mref{m5}, \mref{m10}, \mref{m11}, \mref{m16}\\
+\acref{ac3} & \mref{m4}, \mref{m5}, \mref{m10}, \mref{m11}, \mref{m16}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
@@ -342,12 +393,12 @@ because they use modules from the lower levels.
 
 \begin{figure}[H]
 \centering
-%\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
+\includegraphics[width=0.7\textwidth]{UsesHierarchy.png}
 \caption{Use hierarchy among modules}
 \label{FigUH}
 \end{figure}
 
-%\section*{References}
+\section*{References}
 
 \bibliographystyle {plainnat}
 \bibliography {MG}

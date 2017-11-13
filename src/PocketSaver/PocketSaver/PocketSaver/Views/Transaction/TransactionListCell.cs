@@ -25,9 +25,9 @@ namespace PocketSaver.Views.Transaction
         public static readonly BindableProperty CommentProperty =
             BindableProperty.Create("Comment", typeof(string), typeof(TransactionListCell), "Comment");
         public static readonly BindableProperty DateProperty =
-            BindableProperty.Create("Date", typeof(DateTime), typeof(TransactionListCell), null);
+            BindableProperty.Create("Date", typeof(DateTime?), typeof(TransactionListCell), null);
         public static readonly BindableProperty PurchaseAmountProperty =
-            BindableProperty.Create("PurchaseAmount", typeof(decimal), typeof(TransactionListCell), 0.00);
+            BindableProperty.Create("PurchaseAmount", typeof(decimal), typeof(TransactionListCell), 0.00m);
 
         //Attributes that are associated with the bindable properties
         public string Category

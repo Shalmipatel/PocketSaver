@@ -12,5 +12,6 @@ namespace PocketSaver.Models
         public string Category { get; set; }
         public DateTime Date { get; set; }
         public decimal PurchaseAmount { get; set; }
+        public string Comment { get; set; }
     }
 }

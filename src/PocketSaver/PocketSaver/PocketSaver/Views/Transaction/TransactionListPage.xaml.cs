@@ -20,7 +20,6 @@ namespace PocketSaver.Views.Transaction
             InitializeComponent();
 
             viewModel = new TransactionViewModel();
-
         }
 
         protected override async void OnAppearing()

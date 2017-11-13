@@ -58,15 +58,14 @@ namespace PocketSaver.Services
                 {
                     var content = await response.Content.ReadAsStringAsync();
 
-                    List<TransactionModel>result = JsonConvert.DeserializeObject<List<TransactionModel>>(content);
+                    data = JsonConvert.DeserializeObject<T>(Convert.ToString(content));
 
-                    data = JsonConvert.DeserializeObject<T>(Convert.ToString(result));
-
-                } else
+                }
+                else
                 {
                     throw new Exception("Could not retrieve data");
                 }
-            } 
+            }
             catch (Exception ex)
             {
                 throw ex;

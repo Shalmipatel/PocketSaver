@@ -10,7 +10,8 @@ namespace PocketSaver.Models
     {
         public string _id { get; set; }
         public string Category { get; set; }
-        public String Date { get; set; }
+        public DateTime Date { get; set; }
         public decimal PurchaseAmount { get; set; }
+        public string Comment { get; set; }
     }
 }

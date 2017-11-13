@@ -1,24 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PocketSaver.Views.Transaction.TransactionListPage"
-             xmlns:control="clr-namespace:PocketSaver.Views.Shared"
-             xmlns:local="clr-namespace:PocketSaver.Views.Transaction"
-             xmlns:convert="clr-namespace:PocketSaver.Helpers"
-             Title="Transaction List Page">
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PocketSaver.Views.Transaction.TransactionListPage"
+            xmlns:control="clr-namespace:PocketSaver.Views.Shared"
+            xmlns:local="clr-namespace:PocketSaver.Views.Transaction"
+            xmlns:convert="clr-namespace:PocketSaver.Helpers"
+            Title="Transaction List Page">
     <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="b1" Clicked="b1_ClickedAsync" Text="Refresh"/>
-        </StackLayout>
-        <!--<Grid HorizontalOptions="Center">
+        <Grid HorizontalOptions="Center">
             <ListView x:Name="transactionList" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <local:TransactionListCell Category="{Binding Category}" Comment="{Binding Comment}"
-                                                   Date="{Binding Date}" PurchaseAmount="{Binding PurchaseAmount}" />
+                                                  Date="{Binding Date}" PurchaseAmount="{Binding PurchaseAmount}" />
                     </DataTemplate>
-                </ListView.ItemTemplate> "
+                </ListView.ItemTemplate>
             </ListView>
-        </Grid>-->
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

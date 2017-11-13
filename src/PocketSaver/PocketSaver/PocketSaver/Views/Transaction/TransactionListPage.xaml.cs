@@ -20,24 +20,14 @@ namespace PocketSaver.Views.Transaction
             InitializeComponent();
 
             viewModel = new TransactionViewModel();
-            //activityIndicator.BindingContext = viewModel;
-
         }
 
-        //protected override async void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //    await activityIndicator.Begin();
-        //    await TransactionViewModel.RefreshList();
-        //    transactionList.ItemsSource = TransactionViewModel.transactionDatum;
-        //    BindingContext = viewModel;
-        //    await activityIndicator.End();
-        //}
-
-        private async Task b1_ClickedAsync(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
+            base.OnAppearing();
             await TransactionViewModel.RefreshList();
-
+            transactionList.ItemsSource = TransactionViewModel.transactionDatum;
+            BindingContext = viewModel;
         }
     }
 }

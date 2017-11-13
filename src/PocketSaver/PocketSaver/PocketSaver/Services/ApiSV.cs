@@ -12,6 +12,7 @@ namespace PocketSaver.Services
 {
     public class ApiSV
     {
+        
         HttpClient client;
         public string url { get; set; }
         StringContent stringContent;
@@ -22,8 +23,9 @@ namespace PocketSaver.Services
             client.MaxResponseContentBufferSize = 256000;
             
 
-            var byteArray = Encoding.UTF8.GetBytes("a72b41b201c6003c9d363ae6d1d0b82e0dd2c");
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
+            var byteArray = Encoding.UTF8.GetBytes("59ed1d1316d89bb77832946f");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("x-apikey", Convert.ToBase64String(byteArray));
+
 
         }
 

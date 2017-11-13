@@ -7,7 +7,10 @@
              xmlns:convert="clr-namespace:PocketSaver.Helpers"
              Title="Transaction List Page">
     <ContentPage.Content>
-        <Grid HorizontalOptions="Center">
+        <StackLayout>
+            <Button x:Name="b1" Clicked="b1_ClickedAsync" Text="Refresh"/>
+        </StackLayout>
+        <!--<Grid HorizontalOptions="Center">
             <ListView x:Name="transactionList" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -16,6 +19,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate> "
             </ListView>
-        </Grid>
+        </Grid>-->
     </ContentPage.Content>
 </ContentPage>

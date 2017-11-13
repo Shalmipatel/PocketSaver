@@ -46,6 +46,7 @@
     <Compile Include="Helpers\ObservableObject.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
     <Compile Include="Services\Models\BaseDataObject.cs" />
+    <Compile Include="Services\Models\CommonReturnModel.cs" />
     <Compile Include="Services\Models\Item.cs" />
     <Compile Include="Services\Models\MasterPageItem.cs" />
     <Compile Include="Services\Models\TransactionModel.cs" />

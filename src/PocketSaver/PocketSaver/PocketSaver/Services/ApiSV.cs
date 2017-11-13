@@ -24,7 +24,9 @@ namespace PocketSaver.Services
             
 
             var byteArray = Encoding.UTF8.GetBytes("59ed1d1316d89bb77832946f");
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("x-apikey", Convert.ToBase64String(byteArray));
+            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("x-apikey", Convert.ToBase64String(byteArray));
+            client.DefaultRequestHeaders.Add("x-apikey", "59ed1d1316d89bb77832946f");
+            
 
 
         }
@@ -56,7 +58,7 @@ namespace PocketSaver.Services
                 {
                     var content = await response.Content.ReadAsStringAsync();
 
-                    TransactionModel result = JsonConvert.DeserializeObject<TransactionModel>(content);
+                    List<TransactionModel>result = JsonConvert.DeserializeObject<List<TransactionModel>>(content);
 
                     data = JsonConvert.DeserializeObject<T>(Convert.ToString(result));
 

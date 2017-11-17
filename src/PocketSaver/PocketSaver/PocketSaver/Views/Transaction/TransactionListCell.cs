@@ -60,7 +60,7 @@ namespace PocketSaver.Views.Transaction
                 titleNW.Text = Comment;
                 titleNE.Text = "Category: " + Category;
                 titleSW.Text = "Date: " + String.Format("{0:MMM d, yyyy}", Date);
-                titleSE.Text = "Purchase Amount: " + Convert.ToString(PurchaseAmount);
+                titleSE.Text = "Purchase Amount: $" + string.Format("{0:f2}", PurchaseAmount);
             }
         }
 

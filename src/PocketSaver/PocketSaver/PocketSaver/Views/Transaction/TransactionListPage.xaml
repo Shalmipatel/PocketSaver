@@ -5,7 +5,10 @@
             xmlns:control="clr-namespace:PocketSaver.Views.Shared"
             xmlns:local="clr-namespace:PocketSaver.Views.Transaction"
             xmlns:convert="clr-namespace:PocketSaver.Helpers"
-            Title="Transaction List Page">
+            Title="Transaction Summary">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="addButton" Text="ADD" Order="Primary" Clicked="addButton_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid HorizontalOptions="Center">
             <ListView x:Name="transactionList" HasUnevenRows="True">
@@ -16,6 +19,13 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <ActivityIndicator x:Name="load" Color="DodgerBlue" IsRunning="False" VerticalOptions="Center" HorizontalOptions="Center" 
+                               WidthRequest="50" HeightRequest="50" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.33}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.28}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

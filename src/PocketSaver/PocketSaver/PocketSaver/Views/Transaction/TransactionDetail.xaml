@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketSaver.Views.Transaction.TransactionDetail">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="editButton" Text="EDIT" Order="Primary" Clicked="editButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="transactionDetail" HasUnevenRows="True" Margin="2,0,2,0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

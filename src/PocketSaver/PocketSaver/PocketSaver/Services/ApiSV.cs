@@ -87,15 +87,35 @@ namespace PocketSaver.Services
                 {
                     var content = await response.Content.ReadAsStringAsync();
 
-                    TransactionModel result = JsonConvert.DeserializeObject<TransactionModel>(content);
-
-                    data = JsonConvert.DeserializeObject<T>(Convert.ToString(result));
+                    data = JsonConvert.DeserializeObject<T>(Convert.ToString(content));
 
                     return data;
                 } else
                 {
                     throw new Exception("Returned Null");
                 }
+            }
+        }
+
+        public async Task<T> Put<T>()
+        {
+            T result = default(T);
+
+            using (client)
+            {
+                client.BaseAddress = new Uri(String.Format(url));
+                var response = await client.PutAsync(client.BaseAddress, stringContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+
+                    result = JsonConvert.DeserializeObject<T>(Convert.ToString(content));
+
+                } else
+                {
+                    throw new Exception("Returned Null");
+                }
+                return result;
             }
         }
     }

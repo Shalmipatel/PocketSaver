@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PocketSaver.Views.Transaction.TransactionEditPage"
+             Title="Add Transaction">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="saveButton" Text="SAVE" Order="Primary" Clicked="saveButton_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Transaction Summary">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2,0">
+                                <Label Text="Category: " TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" Font="16"/>
+                                <Entry x:Name="categoryEntry" Placeholder="Ex: Food" HorizontalOptions="FillAndExpand" Completed="categoryEntry_Completed"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2,0">
+                                <Label Text="Comment: " TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" Font="16"/>
+                                <Entry x:Name="commentEntry" Placeholder="Description of Transaction" HorizontalOptions="FillAndExpand" Completed="commentEntry_Completed"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2,0" >
+                                <Label Text="Purchase Amount: " TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" Font="16"/>
+                                <Entry x:Name="purchaseAmountEntry" Placeholder="xx.xx" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Completed="purchaseAmountEntry_Completed"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2,0">
+                                <Label Text="Date: " TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" Font="16"/>
+                                <Entry x:Name="dateEntry" Placeholder="YYYY-MM-DD" HorizontalOptions="FillAndExpand" Completed="dateEntry_Completed"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <ActivityIndicator x:Name="load" Color="DodgerBlue" IsRunning="False" VerticalOptions="Center" HorizontalOptions="Center" 
+                               WidthRequest="50" HeightRequest="50" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.33}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.28}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

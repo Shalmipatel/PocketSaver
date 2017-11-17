@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Render\CustomEntryRenderer.cs" />
     <Compile Include="Render\CustomSwitchRenderer.cs" />
     <Compile Include="Render\TintedImageRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

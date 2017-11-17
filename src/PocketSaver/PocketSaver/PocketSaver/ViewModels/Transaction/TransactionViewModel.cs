@@ -28,6 +28,7 @@ namespace PocketSaver.ViewModels.Transaction
 
         public static async Task RefreshList()
         {
+            transactionDatum.Clear();
             ApiSV sv = new ApiSV();
 
             sv.url = sv.UrlBuilder("");

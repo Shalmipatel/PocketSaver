@@ -31,7 +31,7 @@ namespace PocketSaver.ViewModels.Transaction
             transactionDatum.Clear();
             ApiSV sv = new ApiSV();
 
-            sv.url = sv.UrlBuilder(sv.QueryBuilder("?q={}&sort=Date&dir=-1"));
+            sv.url = sv.UrlBuilder(sv.QueryBuilder("{}", "&sort=Date&dir=-1"));
 
             try
             {

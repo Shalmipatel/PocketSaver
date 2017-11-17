@@ -36,9 +36,9 @@ namespace PocketSaver.Services
             return "https://testdb-014a.restdb.io/rest/test" + query;
         }
 
-        public String QueryBuilder(String query)
+        public String QueryBuilder(String query, String aggregate)
         {
-            return "?q=" + query;
+            return "?q={" + query + "}" + aggregate;
         }
 
         public void HttpBodyBuilder<T>(T obj)

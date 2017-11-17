@@ -27,7 +27,7 @@ namespace PocketSaver.Views.Transaction
             categoryEntry.Text = category;
             commentEntry.Text = comment;
             purchaseAmountEntry.Text = Convert.ToString(purchaseAmount);
-            dateEntry.Text = String.Format("{0:yyyy-MM-dd}", date);
+            dateEntry.Text = String.Format("{0:MM-dd-yyyy}", date);
             this.Title = comment + " - " + String.Format("{0:MMM d, yyyy}", date);
 
 

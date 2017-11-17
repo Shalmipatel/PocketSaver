@@ -32,7 +32,7 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="2,0">
                                 <Label Text="Date: " TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" Font="16"/>
-                                <Entry x:Name="dateEntry" Placeholder="YYYY-MM-DD" HorizontalOptions="FillAndExpand" Completed="dateEntry_Completed"/>
+                                <Entry x:Name="dateEntry" Placeholder="MM-DD-YYYY" HorizontalOptions="FillAndExpand" Completed="dateEntry_Completed"/>
                             </StackLayout>
                         </ViewCell>
                     </TableSection>

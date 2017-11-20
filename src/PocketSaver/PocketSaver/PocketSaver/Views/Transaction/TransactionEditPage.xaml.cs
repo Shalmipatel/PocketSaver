@@ -44,10 +44,19 @@ namespace PocketSaver.Views.Transaction
             } else
             {
                 TransactionModel obj = new TransactionModel();
-                obj.Category = categoryEntry.Text;
-                obj.Comment = commentEntry.Text;
-                obj.Date = Convert.ToDateTime(dateEntry.Text);
-                obj.PurchaseAmount = Decimal.Parse(purchaseAmountEntry.Text);
+                try
+                {
+                    obj.Category = categoryEntry.Text;
+                    obj.Comment = commentEntry.Text;
+                    obj.Date = Convert.ToDateTime(dateEntry.Text);
+                    obj.PurchaseAmount = Decimal.Parse(purchaseAmountEntry.Text);
+                } 
+                catch
+                {
+                    await DisplayAlert("Oops!", "One of the input parameters is not in the correct format, Please try again!", "OK");
+                    load.IsRunning = false;
+                    return;
+                }
 
                 ApiSV sv = new ApiSV();
                 sv.HttpBodyBuilder<TransactionModel>(obj);

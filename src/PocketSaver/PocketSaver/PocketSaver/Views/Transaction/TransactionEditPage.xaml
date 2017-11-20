@@ -35,10 +35,13 @@
                                 <Entry x:Name="dateEntry" Placeholder="MM-DD-YYYY" HorizontalOptions="FillAndExpand" Completed="dateEntry_Completed"/>
                             </StackLayout>
                         </ViewCell>
+                        <ViewCell>
+                            <Button x:Name="delButton" Text="DELETE" HorizontalOptions="FillAndExpand" Clicked="delButton_Clicked" IsVisible="False" IsEnabled="False"/>
+                        </ViewCell>
                     </TableSection>
                 </TableRoot>
             </TableView>
-            <ActivityIndicator x:Name="load" Color="DodgerBlue" IsRunning="False" VerticalOptions="Center" HorizontalOptions="Center" 
+            <ActivityIndicator x:Name="load" Color="DodgerBlue" IsRunning="False" VerticalOptions="FillAndExpand" HorizontalOptions="Center" 
                                WidthRequest="50" HeightRequest="50" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
                                     Property=Height,
                                     Factor=0.33}"

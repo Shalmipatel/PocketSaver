@@ -118,5 +118,26 @@ namespace PocketSaver.Services
                 return result;
             }
         }
+
+        public async Task<T> Delete<T>()
+        {
+            T result = default(T);
+
+            using (client)
+            {
+                client.BaseAddress = new Uri(String.Format(url));
+                var response = await client.DeleteAsync(client.BaseAddress);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+
+                    result = JsonConvert.DeserializeObject<T>(Convert.ToString(content));
+                } else
+                {
+                    throw new Exception("Returned Null");
+                }
+                return result;
+            }
+        }
     }
 }

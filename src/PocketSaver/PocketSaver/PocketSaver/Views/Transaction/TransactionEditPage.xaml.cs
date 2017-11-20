@@ -29,6 +29,8 @@ namespace PocketSaver.Views.Transaction
             purchaseAmountEntry.Text = Convert.ToString(purchaseAmount);
             dateEntry.Text = String.Format("{0:MM-dd-yyyy}", date);
             this.Title = comment + " - " + String.Format("{0:MMM d, yyyy}", date);
+            delButton.IsVisible = true;
+            delButton.IsEnabled = true;
 
 
         }
@@ -86,6 +88,35 @@ namespace PocketSaver.Views.Transaction
 
         }
 
+        private async void delButton_Clicked(object sender, EventArgs e)
+        {
+            if (id != null)
+            {
+                ApiSV sv = new ApiSV();
+                sv.url = sv.UrlBuilder("/" + id);
+                var answer = await DisplayAlert("Wait!", "Are you sure you want to delete this transaction?", "YES", "NO");
+                if (answer)
+                {
+                    try
+                    {
+                        load.IsRunning = true;
+                        await sv.Delete<TransactionModel>();
+                        load.IsRunning = false;
+                        await DisplayAlert("Success!", "Transaction was deleted!", "OK");
+                        await Navigation.PushAsync(new TransactionListPage());
+                    }
+                    catch
+                    {
+                        await DisplayAlert("Error", "Something went wrong with the API Call, Try Again!", "OK");
+                        load.IsRunning = false;
+                    }
+                } else
+                {
+                    return;
+                }
+            }
+        }
+
         private void categoryEntry_Completed(object sender, EventArgs e)
         {
             commentEntry.Focus();
@@ -105,5 +136,6 @@ namespace PocketSaver.Views.Transaction
         {
             saveButton_Clicked(sender, e);
         }
+
     }
 }

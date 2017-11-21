@@ -25,6 +25,11 @@ namespace PocketSaver.Views
 
             MainMenuPage.ListView.ItemSelected += OnItemSelected;
         }
+        /// <summary>
+        /// Method for when an object in a list is selected.
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">SelectedItemChangedEventArgs e</param>
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterPageItem;
@@ -41,6 +46,10 @@ namespace PocketSaver.Views
             }
         }
 
+        /// <summary>
+        /// Method to navigate to a new page.
+        /// </summary>
+        /// <param name="page">Page page which is an instance of a new Class.</param>
         public void NavigateTo(Page page)
         {
             Detail = new NavigationPage(page);

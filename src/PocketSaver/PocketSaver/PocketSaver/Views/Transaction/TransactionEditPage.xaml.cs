@@ -11,15 +11,33 @@ using Xamarin.Forms.Xaml;
 
 namespace PocketSaver.Views.Transaction
 {
+    /// <summary>
+    /// Class for the TransactionEditPage for the PocketSaver Mobile.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TransactionEditPage : ContentPage
     {
+        /// <summary>
+        /// Declaring variable id to be used throughout the class.
+        /// </summary>
         string id;
+
+        /// <summary>
+        /// Constructor for the TransactionEditPage
+        /// </summary>
         public TransactionEditPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructor overload for the TransactionEditPage.
+        /// </summary>
+        /// <param name="tId">string tId is the id retrieved from the database for the TransactionModel Object</param>
+        /// <param name="category">string category is the category retrieved from the database for the TransactionModel Object</param>
+        /// <param name="comment">string comment is the comment retrieved from the database for the TransactionModel Object</param>
+        /// <param name="date">DateTime date is the date retrieved from the database for the TransactionModel Object</param>
+        /// <param name="purchaseAmount">Decimal purchaseAmount is the purchase amount retrieved from the database for the TransactionModel Object</param>
         public TransactionEditPage(string tId, string category, string comment, DateTime date, Decimal purchaseAmount)
         {
             InitializeComponent();
@@ -31,11 +49,13 @@ namespace PocketSaver.Views.Transaction
             this.Title = comment + " - " + String.Format("{0:MMM d, yyyy}", date);
             delButton.IsVisible = true;
             delButton.IsEnabled = true;
-
-
         }
 
-
+        /// <summary>
+        /// Method for when the Save button is clicked.
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">EventArgs e</param>
         private async void saveButton_Clicked(object sender, EventArgs e)
         {
             if (categoryEntry.Text == null || commentEntry.Text == null || purchaseAmountEntry.Text == null || dateEntry.Text == null)
@@ -97,6 +117,11 @@ namespace PocketSaver.Views.Transaction
 
         }
 
+        /// <summary>
+        /// Mehod for the Delete button clicked event.
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">EventArgs e</param>
         private async void delButton_Clicked(object sender, EventArgs e)
         {
             if (id != null)
@@ -126,21 +151,41 @@ namespace PocketSaver.Views.Transaction
             }
         }
 
+        /// <summary>
+        /// Method for when the categoryEntry is completed to shift the entry's focus to another entry
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">EventArgs e</param>
         private void categoryEntry_Completed(object sender, EventArgs e)
         {
             commentEntry.Focus();
         }
 
+        /// <summary>
+        /// Method for when the commentEntry is completed to shift the entry's focus to another entry
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">EventArgs e</param>
         private void commentEntry_Completed(object sender, EventArgs e)
         {
             purchaseAmountEntry.Focus();
         }
 
+        /// <summary>
+        /// Method for when the purchaseAmountEntry is completed to shift the entry's focus to another entry
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">EventArgs e</param>
         private void purchaseAmountEntry_Completed(object sender, EventArgs e)
         {
             dateEntry.Focus();
         }
 
+        /// <summary>
+        /// Method for when the dateEntry is completed to shift the entry's focus to another entry
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">EventArgs e</param>
         private void dateEntry_Completed(object sender, EventArgs e)
         {
             saveButton_Clicked(sender, e);

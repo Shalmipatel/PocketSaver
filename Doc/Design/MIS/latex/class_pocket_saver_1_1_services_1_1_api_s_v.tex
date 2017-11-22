@@ -1,29 +1,186 @@
 \hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v}{}\section{Pocket\+Saver.\+Services.\+Api\+SV Class Reference}
 \label{class_pocket_saver_1_1_services_1_1_api_s_v}\index{Pocket\+Saver.\+Services.\+Api\+SV@{Pocket\+Saver.\+Services.\+Api\+SV}}
+
+
+Class for the Api Service for the entire \hyperlink{namespace_pocket_saver}{Pocket\+Saver} Application. In this service, G\+ET, P\+O\+ST, P\+UT, and D\+E\+L\+E\+TE Methods are defined in a generic form for whatever Object the Database will return.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_aa770136ecefc3ae66bff6dc75670df45}\label{class_pocket_saver_1_1_services_1_1_api_s_v_aa770136ecefc3ae66bff6dc75670df45}} 
-String {\bfseries Url\+Builder} (String query)
-\item 
-\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_ade3c500d8eb726bcdc31e34e601cec7c}\label{class_pocket_saver_1_1_services_1_1_api_s_v_ade3c500d8eb726bcdc31e34e601cec7c}} 
-String {\bfseries Query\+Builder} (String query)
-\item 
-\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_a88eb168469465c1fcba4c25ce00c0204}\label{class_pocket_saver_1_1_services_1_1_api_s_v_a88eb168469465c1fcba4c25ce00c0204}} 
-void {\bfseries Http\+Body\+Builder$<$ T $>$} (T obj)
-\item 
-\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_af0ad1db31c39565bc5e46d7ef1985fbb}\label{class_pocket_saver_1_1_services_1_1_api_s_v_af0ad1db31c39565bc5e46d7ef1985fbb}} 
-async Task$<$ T $>$ {\bfseries Get$<$ T $>$} ()
-\item 
-\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_a4db27f4d8526c13b6227e36f40e609e3}\label{class_pocket_saver_1_1_services_1_1_api_s_v_a4db27f4d8526c13b6227e36f40e609e3}} 
-async Task$<$ T $>$ {\bfseries Post$<$ T $>$} ()
-\end{DoxyCompactItemize}
+\hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_ab265e3f79436f302dde76459b6fefa46}{Api\+SV} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v}{Api\+SV} which constructs the new H\+T\+TP Client and adds the default headers. \end{DoxyCompactList}\item 
+String \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_aa770136ecefc3ae66bff6dc75670df45}{Url\+Builder} (String query)
+\begin{DoxyCompactList}\small\item\em Method used to create the U\+RL for the \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v}{Api\+SV} \end{DoxyCompactList}\item 
+String \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_aa5064fcb4a18768820f20c39d75d4d44}{Query\+Builder} (String query, String aggregate)
+\begin{DoxyCompactList}\small\item\em Method used to create a query to the database. \end{DoxyCompactList}\item 
+void \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_a88eb168469465c1fcba4c25ce00c0204}{Http\+Body\+Builder$<$ T $>$} (T obj)
+\begin{DoxyCompactList}\small\item\em Method used to create the Http\+Body of the P\+O\+ST Api request. \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_af0ad1db31c39565bc5e46d7ef1985fbb}{Get$<$ T $>$} ()
+\begin{DoxyCompactList}\small\item\em Api G\+ET Request method. \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_a4db27f4d8526c13b6227e36f40e609e3}{Post$<$ T $>$} ()
+\begin{DoxyCompactList}\small\item\em Api P\+O\+ST Request \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_addfb96abb14d6189ad11040354540e08}{Put$<$ T $>$} ()
+\begin{DoxyCompactList}\small\item\em Api P\+UT Request \end{DoxyCompactList}\item 
+async Task$<$ T $>$ \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v_a1a4b1d8cc442dc1bcb908ff2ae7b243f}{Delete$<$ T $>$} ()
+\begin{DoxyCompactList}\small\item\em Api D\+E\+L\+E\+TE Request \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_a61c115b80ecb71b84cd31052aa876e4e}\label{class_pocket_saver_1_1_services_1_1_api_s_v_a61c115b80ecb71b84cd31052aa876e4e}} 
 string {\bfseries url}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for the Api Service for the entire \hyperlink{namespace_pocket_saver}{Pocket\+Saver} Application. In this service, G\+ET, P\+O\+ST, P\+UT, and D\+E\+L\+E\+TE Methods are defined in a generic form for whatever Object the Database will return. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_ab265e3f79436f302dde76459b6fefa46}\label{class_pocket_saver_1_1_services_1_1_api_s_v_ab265e3f79436f302dde76459b6fefa46}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Api\+SV@{Api\+SV}}
+\index{Api\+SV@{Api\+SV}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Api\+S\+V()}{ApiSV()}}
+{\footnotesize\ttfamily Pocket\+Saver.\+Services.\+Api\+S\+V.\+Api\+SV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v}{Api\+SV} which constructs the new H\+T\+TP Client and adds the default headers. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_a1a4b1d8cc442dc1bcb908ff2ae7b243f}\label{class_pocket_saver_1_1_services_1_1_api_s_v_a1a4b1d8cc442dc1bcb908ff2ae7b243f}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Delete$<$ T $>$@{Delete$<$ T $>$}}
+\index{Delete$<$ T $>$@{Delete$<$ T $>$}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Delete$<$ T $>$()}{Delete< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ Pocket\+Saver.\+Services.\+Api\+S\+V.\+Delete$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Api D\+E\+L\+E\+TE Request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Model that the D\+E\+L\+E\+TE request will map to.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T Object that will be deleted by the Api Delete request.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_af0ad1db31c39565bc5e46d7ef1985fbb}\label{class_pocket_saver_1_1_services_1_1_api_s_v_af0ad1db31c39565bc5e46d7ef1985fbb}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ Pocket\+Saver.\+Services.\+Api\+S\+V.\+Get$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Api G\+ET Request method. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Generic type T\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T object retrieved from the Api request.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_a88eb168469465c1fcba4c25ce00c0204}\label{class_pocket_saver_1_1_services_1_1_api_s_v_a88eb168469465c1fcba4c25ce00c0204}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Http\+Body\+Builder$<$ T $>$@{Http\+Body\+Builder$<$ T $>$}}
+\index{Http\+Body\+Builder$<$ T $>$@{Http\+Body\+Builder$<$ T $>$}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Http\+Body\+Builder$<$ T $>$()}{HttpBodyBuilder< T >()}}
+{\footnotesize\ttfamily void Pocket\+Saver.\+Services.\+Api\+S\+V.\+Http\+Body\+Builder$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method used to create the Http\+Body of the P\+O\+ST Api request. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & T is a generic object to be used in the Http\+Body\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & T object which will be serialized into a String\+Content object.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_a4db27f4d8526c13b6227e36f40e609e3}\label{class_pocket_saver_1_1_services_1_1_api_s_v_a4db27f4d8526c13b6227e36f40e609e3}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Post$<$ T $>$@{Post$<$ T $>$}}
+\index{Post$<$ T $>$@{Post$<$ T $>$}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Post$<$ T $>$()}{Post< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ Pocket\+Saver.\+Services.\+Api\+S\+V.\+Post$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Api P\+O\+ST Request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Model that the P\+O\+ST Request will map to.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T Object after successfully posting object to the Database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_addfb96abb14d6189ad11040354540e08}\label{class_pocket_saver_1_1_services_1_1_api_s_v_addfb96abb14d6189ad11040354540e08}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Put$<$ T $>$@{Put$<$ T $>$}}
+\index{Put$<$ T $>$@{Put$<$ T $>$}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Put$<$ T $>$()}{Put< T >()}}
+{\footnotesize\ttfamily async Task$<$T$>$ Pocket\+Saver.\+Services.\+Api\+S\+V.\+Put$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Api P\+UT Request 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Model that the P\+UT Request will map to.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Object T that is put into the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_aa5064fcb4a18768820f20c39d75d4d44}\label{class_pocket_saver_1_1_services_1_1_api_s_v_aa5064fcb4a18768820f20c39d75d4d44}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Query\+Builder@{Query\+Builder}}
+\index{Query\+Builder@{Query\+Builder}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Query\+Builder()}{QueryBuilder()}}
+{\footnotesize\ttfamily String Pocket\+Saver.\+Services.\+Api\+S\+V.\+Query\+Builder (\begin{DoxyParamCaption}\item[{String}]{query,  }\item[{String}]{aggregate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method used to create a query to the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & String for the query parameters to be added to the url.\\
+\hline
+{\em aggregate} & String for the aggregate queries to be added to the url.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final string with all query parameters to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pocket_saver_1_1_services_1_1_api_s_v_aa770136ecefc3ae66bff6dc75670df45}\label{class_pocket_saver_1_1_services_1_1_api_s_v_aa770136ecefc3ae66bff6dc75670df45}} 
+\index{Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}!Url\+Builder@{Url\+Builder}}
+\index{Url\+Builder@{Url\+Builder}!Pocket\+Saver\+::\+Services\+::\+Api\+SV@{Pocket\+Saver\+::\+Services\+::\+Api\+SV}}
+\subsubsection{\texorpdfstring{Url\+Builder()}{UrlBuilder()}}
+{\footnotesize\ttfamily String Pocket\+Saver.\+Services.\+Api\+S\+V.\+Url\+Builder (\begin{DoxyParamCaption}\item[{String}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method used to create the U\+RL for the \hyperlink{class_pocket_saver_1_1_services_1_1_api_s_v}{Api\+SV} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & String which is added to the end of the string for additional database queries\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String for the final url.
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

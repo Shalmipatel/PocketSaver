@@ -5,7 +5,7 @@
     <ContentPage.Content>
 
 
-        <Grid>
+        <Grid HorizontalOptions="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -14,9 +14,10 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <StackLayout>
+                <Label Text="Amount:" />
+                <Label x:Name="Amount" Text="default" Grid.Row="1" Grid.Column="0" FontSize = "90" VerticalTextAlignment="Center"/>
+                <Label Text="Select one of the following options:" />
                 <Picker x:Name="monthPicker" HorizontalOptions="FillAndExpand"/>
-
-                <Label x:Name="Amount" Text="default" Grid.Row="1" Grid.Column="0"/>
                 
             </StackLayout>
             

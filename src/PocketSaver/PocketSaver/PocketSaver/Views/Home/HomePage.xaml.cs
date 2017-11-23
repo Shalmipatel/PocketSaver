@@ -25,6 +25,7 @@ namespace PocketSaver.Views.Home
             viewModel = new HomePageViewModel();
             viewModel.CalcMonth();
             monthList = new ObservableCollection<string>();
+            monthList.Add("Today");
             monthList.Add("January");
             monthList.Add("Febuary");
             monthList.Add("March");
@@ -48,50 +49,54 @@ namespace PocketSaver.Views.Home
                     switch (monthPicker.SelectedIndex)
                     {
                         case 0:
-                            amount = Convert.ToString(viewModel.janTot);
+                            amount = Convert.ToString(viewModel.dailyTot);
                             Amount.Text = amount;
                             break;
                         case 1:
-                            amount = Convert.ToString(viewModel.febTot);
+                            amount = Convert.ToString(viewModel.janTot);
                             Amount.Text = amount;
                             break;
                         case 2:
-                            amount = Convert.ToString(viewModel.marTot);
+                            amount = Convert.ToString(viewModel.febTot);
                             Amount.Text = amount;
                             break;
                         case 3:
-                            amount = Convert.ToString(viewModel.aprTot);
+                            amount = Convert.ToString(viewModel.marTot);
                             Amount.Text = amount;
                             break;
                         case 4:
-                            amount = Convert.ToString(viewModel.mayTot);
+                            amount = Convert.ToString(viewModel.aprTot);
                             Amount.Text = amount;
                             break;
                         case 5:
-                            amount = Convert.ToString(viewModel.junTot);
+                            amount = Convert.ToString(viewModel.mayTot);
                             Amount.Text = amount;
                             break;
                         case 6:
-                            amount = Convert.ToString(viewModel.julTot);
+                            amount = Convert.ToString(viewModel.junTot);
                             Amount.Text = amount;
                             break;
                         case 7:
-                            amount = Convert.ToString(viewModel.augTot);
+                            amount = Convert.ToString(viewModel.julTot);
                             Amount.Text = amount;
                             break;
                         case 8:
-                            amount = Convert.ToString(viewModel.sepTot);
+                            amount = Convert.ToString(viewModel.augTot);
                             Amount.Text = amount;
                             break;
                         case 9:
-                            amount = Convert.ToString(viewModel.octTot);
+                            amount = Convert.ToString(viewModel.sepTot);
                             Amount.Text = amount;
                             break;
                         case 10:
-                            amount = Convert.ToString(viewModel.novTot);
+                            amount = Convert.ToString(viewModel.octTot);
                             Amount.Text = amount;
                             break;
                         case 11:
+                            amount = Convert.ToString(viewModel.novTot);
+                            Amount.Text = amount;
+                            break;
+                        case 12:
                             amount = Convert.ToString(viewModel.decTot);
                             Amount.Text = amount;
                             break;
@@ -117,7 +122,7 @@ namespace PocketSaver.Views.Home
 
         //void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         //{
-           
+
         //    int selectedIndex = monthPicker.SelectedIndex;
 
         //    if (selectedIndex != -1)

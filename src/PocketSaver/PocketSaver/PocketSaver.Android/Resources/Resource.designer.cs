@@ -26,6 +26,8 @@ namespace PocketSaver.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::PocketSaver.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::PocketSaver.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::PocketSaver.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -3003,6 +3005,12 @@ namespace PocketSaver.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f080027
+			public const int ApplicationName = 2131230759;
+			
+			// aapt resource value: 0x7f080026
+			public const int Hello = 2131230758;
+			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;
 			
@@ -3060,8 +3068,8 @@ namespace PocketSaver.Droid
 			// aapt resource value: 0x7f080021
 			public const int abc_toolbar_collapse_description = 2131230753;
 			
-			// aapt resource value: 0x7f080026
-			public const int app_name = 2131230758;
+			// aapt resource value: 0x7f080028
+			public const int app_name = 2131230760;
 			
 			// aapt resource value: 0x7f080023
 			public const int appbar_scrolling_view_behavior = 2131230755;

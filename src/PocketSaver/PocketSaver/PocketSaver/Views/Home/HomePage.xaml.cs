@@ -1,4 +1,5 @@
 ﻿using PocketSaver.ViewModels.HomePage;
+using PocketSaver.Views.Settings;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,66 +50,66 @@ namespace PocketSaver.Views.Home
                     switch (monthPicker.SelectedIndex)
                     {
                         case 0:
-                            amount = Convert.ToString(viewModel.dailyTot);
+                            amount = "$" + Convert.ToString(viewModel.dailyTot);
                             Amount.Text = amount;
                             break;
                         case 1:
-                            amount = Convert.ToString(viewModel.janTot);
+                            amount = "$" + Convert.ToString(viewModel.janTot);
                             Amount.Text = amount;
                             break;
                         case 2:
-                            amount = Convert.ToString(viewModel.febTot);
+                            amount = "$" + Convert.ToString(viewModel.febTot);
                             Amount.Text = amount;
                             break;
                         case 3:
-                            amount = Convert.ToString(viewModel.marTot);
+                            amount = "$" + Convert.ToString(viewModel.marTot);
                             Amount.Text = amount;
                             break;
                         case 4:
-                            amount = Convert.ToString(viewModel.aprTot);
+                            amount = "$" + Convert.ToString(viewModel.aprTot);
                             Amount.Text = amount;
                             break;
                         case 5:
-                            amount = Convert.ToString(viewModel.mayTot);
+                            amount = "$" + Convert.ToString(viewModel.mayTot);
                             Amount.Text = amount;
                             break;
                         case 6:
-                            amount = Convert.ToString(viewModel.junTot);
+                            amount = "$" + Convert.ToString(viewModel.junTot);
                             Amount.Text = amount;
                             break;
                         case 7:
-                            amount = Convert.ToString(viewModel.julTot);
+                            amount = "$" + Convert.ToString(viewModel.julTot);
                             Amount.Text = amount;
                             break;
                         case 8:
-                            amount = Convert.ToString(viewModel.augTot);
+                            amount = "$" + Convert.ToString(viewModel.augTot);
                             Amount.Text = amount;
                             break;
                         case 9:
-                            amount = Convert.ToString(viewModel.sepTot);
+                            amount = "$" + Convert.ToString(viewModel.sepTot);
                             Amount.Text = amount;
                             break;
                         case 10:
-                            amount = Convert.ToString(viewModel.octTot);
+                            amount = "$" + Convert.ToString(viewModel.octTot);
                             Amount.Text = amount;
                             break;
                         case 11:
-                            amount = Convert.ToString(viewModel.novTot);
+                            amount = "$" + Convert.ToString(viewModel.novTot);
                             Amount.Text = amount;
                             break;
                         case 12:
-                            amount = Convert.ToString(viewModel.decTot);
+                            amount = "$" + Convert.ToString(viewModel.decTot);
                             Amount.Text = amount;
                             break;
                         default:
                             Amount.Text = "Sorry Invalid Month Entered";
                             break;
+
+
+
                     }
-                    //monthPicker.Text = (string)monthPicker.ItemsSource[selectedIndex];
                 }
             };
-
-
         }
 
         protected async override void OnAppearing()
@@ -116,29 +117,57 @@ namespace PocketSaver.Views.Home
             base.OnAppearing();
             //  await HomePageViewModel
 
-            var monkeyNameLabel = new Label();
+            var Label = new Label();
             monthPicker.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: monthList));
+
+            int month = DateTime.Now.Month;
+            decimal currentMonth;
+            switch (month)
+            {
+                case 1:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.janTot;
+                    break;
+                case 2:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.febTot;
+                    break;
+                case 3:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.marTot;
+                    break;
+                case 4:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.aprTot;
+                    break;
+                case 5:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.mayTot;
+                    break;
+                case 6:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.junTot;
+                    break;
+                case 7:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.julTot;
+                    break; 
+                case 8:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.augTot;
+                    break;
+                case 9:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.sepTot;
+                    break;
+                case 10:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.octTot;
+                    break;
+                case 11:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.novTot;
+                    break;
+                case 12:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.decTot;
+                    break;
+                default:
+                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - 0;
+                    break;
+            }
+
+            budget.Text = SettingsPage.budgetAmount;
+            remainingBudget.Text = Convert.ToString(currentMonth);
+
         }
-
-        //void OnPickerSelectedIndexChanged(object sender, EventArgs e)
-        //{
-
-        //    int selectedIndex = monthPicker.SelectedIndex;
-
-        //    if (selectedIndex != -1)
-        //    {
-        //        switch (selectedIndex)
-        //        {
-        //            case 1: Amount.Text = "Test";
-        //                    break;
-        //            default: Amount.Text = "0.01";
-        //                break;
-        //        }
-        //        //monthPicker.Text = (string)monthPicker.ItemsSource[selectedIndex];
-        //    }
-
-        //}
-
-
     }
 }

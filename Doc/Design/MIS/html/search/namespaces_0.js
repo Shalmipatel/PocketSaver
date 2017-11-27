@@ -2,7 +2,7 @@ var searchData=
 [
   ['helpers',['Helpers',['../namespace_pocket_saver_1_1_helpers.html',1,'PocketSaver']]],
   ['home',['Home',['../namespace_pocket_saver_1_1_views_1_1_home.html',1,'PocketSaver::Views']]],
-  ['models',['Models',['../namespace_pocket_saver_1_1_models.html',1,'PocketSaver']]],
+  ['models',['Models',['../namespace_pocket_saver_1_1_models.html',1,'PocketSaver.Models'],['../namespace_pocket_saver_1_1_services_1_1_models.html',1,'PocketSaver.Services.Models']]],
   ['pocketsaver',['PocketSaver',['../namespace_pocket_saver.html',1,'']]],
   ['services',['Services',['../namespace_pocket_saver_1_1_services.html',1,'PocketSaver']]],
   ['settings',['Settings',['../namespace_pocket_saver_1_1_views_1_1_settings.html',1,'PocketSaver::Views']]],

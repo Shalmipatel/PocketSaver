@@ -70,24 +70,36 @@ $(function() {
 <div class="title">PocketSaver.Services.ApiSV Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class for the Api Service for the entire <a class="el" href="namespace_pocket_saver.html">PocketSaver</a> Application. In this service, GET, POST, PUT, and DELETE Methods are defined in a generic form for whatever Object the Database will return.  
+ <a href="class_pocket_saver_1_1_services_1_1_api_s_v.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa770136ecefc3ae66bff6dc75670df45"><td class="memItemLeft" align="right" valign="top"><a id="aa770136ecefc3ae66bff6dc75670df45"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>UrlBuilder</b> (String query)</td></tr>
+<tr class="memitem:ab265e3f79436f302dde76459b6fefa46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#ab265e3f79436f302dde76459b6fefa46">ApiSV</a> ()</td></tr>
+<tr class="memdesc:ab265e3f79436f302dde76459b6fefa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html" title="Class for the Api Service for the entire PocketSaver Application. In this service, GET, POST, PUT, and DELETE Methods are defined in a generic form for whatever Object the Database will return. ">ApiSV</a> which constructs the new HTTP Client and adds the default headers.  <a href="#ab265e3f79436f302dde76459b6fefa46">More...</a><br /></td></tr>
+<tr class="separator:ab265e3f79436f302dde76459b6fefa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa770136ecefc3ae66bff6dc75670df45"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#aa770136ecefc3ae66bff6dc75670df45">UrlBuilder</a> (String query)</td></tr>
+<tr class="memdesc:aa770136ecefc3ae66bff6dc75670df45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used to create the URL for the <a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html" title="Class for the Api Service for the entire PocketSaver Application. In this service, GET, POST, PUT, and DELETE Methods are defined in a generic form for whatever Object the Database will return. ">ApiSV</a>  <a href="#aa770136ecefc3ae66bff6dc75670df45">More...</a><br /></td></tr>
 <tr class="separator:aa770136ecefc3ae66bff6dc75670df45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3c500d8eb726bcdc31e34e601cec7c"><td class="memItemLeft" align="right" valign="top"><a id="ade3c500d8eb726bcdc31e34e601cec7c"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>QueryBuilder</b> (String query)</td></tr>
-<tr class="separator:ade3c500d8eb726bcdc31e34e601cec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88eb168469465c1fcba4c25ce00c0204"><td class="memItemLeft" align="right" valign="top"><a id="a88eb168469465c1fcba4c25ce00c0204"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HttpBodyBuilder&lt; T &gt;</b> (T obj)</td></tr>
+<tr class="memitem:aa5064fcb4a18768820f20c39d75d4d44"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#aa5064fcb4a18768820f20c39d75d4d44">QueryBuilder</a> (String query, String aggregate)</td></tr>
+<tr class="memdesc:aa5064fcb4a18768820f20c39d75d4d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used to create a query to the database.  <a href="#aa5064fcb4a18768820f20c39d75d4d44">More...</a><br /></td></tr>
+<tr class="separator:aa5064fcb4a18768820f20c39d75d4d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88eb168469465c1fcba4c25ce00c0204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#a88eb168469465c1fcba4c25ce00c0204">HttpBodyBuilder&lt; T &gt;</a> (T obj)</td></tr>
+<tr class="memdesc:a88eb168469465c1fcba4c25ce00c0204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used to create the HttpBody of the POST Api request.  <a href="#a88eb168469465c1fcba4c25ce00c0204">More...</a><br /></td></tr>
 <tr class="separator:a88eb168469465c1fcba4c25ce00c0204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ad1db31c39565bc5e46d7ef1985fbb"><td class="memItemLeft" align="right" valign="top"><a id="af0ad1db31c39565bc5e46d7ef1985fbb"></a>
-async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Get&lt; T &gt;</b> ()</td></tr>
+<tr class="memitem:af0ad1db31c39565bc5e46d7ef1985fbb"><td class="memItemLeft" align="right" valign="top">async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#af0ad1db31c39565bc5e46d7ef1985fbb">Get&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:af0ad1db31c39565bc5e46d7ef1985fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Api GET Request method.  <a href="#af0ad1db31c39565bc5e46d7ef1985fbb">More...</a><br /></td></tr>
 <tr class="separator:af0ad1db31c39565bc5e46d7ef1985fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4db27f4d8526c13b6227e36f40e609e3"><td class="memItemLeft" align="right" valign="top"><a id="a4db27f4d8526c13b6227e36f40e609e3"></a>
-async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Post&lt; T &gt;</b> ()</td></tr>
+<tr class="memitem:a4db27f4d8526c13b6227e36f40e609e3"><td class="memItemLeft" align="right" valign="top">async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#a4db27f4d8526c13b6227e36f40e609e3">Post&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a4db27f4d8526c13b6227e36f40e609e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Api POST Request  <a href="#a4db27f4d8526c13b6227e36f40e609e3">More...</a><br /></td></tr>
 <tr class="separator:a4db27f4d8526c13b6227e36f40e609e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfb96abb14d6189ad11040354540e08"><td class="memItemLeft" align="right" valign="top">async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#addfb96abb14d6189ad11040354540e08">Put&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:addfb96abb14d6189ad11040354540e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Api PUT Request  <a href="#addfb96abb14d6189ad11040354540e08">More...</a><br /></td></tr>
+<tr class="separator:addfb96abb14d6189ad11040354540e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4b1d8cc442dc1bcb908ff2ae7b243f"><td class="memItemLeft" align="right" valign="top">async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html#a1a4b1d8cc442dc1bcb908ff2ae7b243f">Delete&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a1a4b1d8cc442dc1bcb908ff2ae7b243f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Api DELETE Request  <a href="#a1a4b1d8cc442dc1bcb908ff2ae7b243f">More...</a><br /></td></tr>
+<tr class="separator:a1a4b1d8cc442dc1bcb908ff2ae7b243f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -95,6 +107,294 @@ Properties</h2></td></tr>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>url</b><code> [get, set]</code></td></tr>
 <tr class="separator:a61c115b80ecb71b84cd31052aa876e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for the Api Service for the entire <a class="el" href="namespace_pocket_saver.html">PocketSaver</a> Application. In this service, GET, POST, PUT, and DELETE Methods are defined in a generic form for whatever Object the Database will return. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab265e3f79436f302dde76459b6fefa46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab265e3f79436f302dde76459b6fefa46">&#9670;&nbsp;</a></span>ApiSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PocketSaver.Services.ApiSV.ApiSV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for the <a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html" title="Class for the Api Service for the entire PocketSaver Application. In this service, GET, POST, PUT, and DELETE Methods are defined in a generic form for whatever Object the Database will return. ">ApiSV</a> which constructs the new HTTP Client and adds the default headers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1a4b1d8cc442dc1bcb908ff2ae7b243f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4b1d8cc442dc1bcb908ff2ae7b243f">&#9670;&nbsp;</a></span>Delete< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;T&gt; PocketSaver.Services.ApiSV.Delete&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Api DELETE Request </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Model that the DELETE request will map to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>T Object that will be deleted by the Api Delete request.</dd></dl>
+
+</div>
+</div>
+<a id="af0ad1db31c39565bc5e46d7ef1985fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ad1db31c39565bc5e46d7ef1985fbb">&#9670;&nbsp;</a></span>Get< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;T&gt; PocketSaver.Services.ApiSV.Get&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Api GET Request method. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Generic type T</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>T object retrieved from the Api request.</dd></dl>
+
+</div>
+</div>
+<a id="a88eb168469465c1fcba4c25ce00c0204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88eb168469465c1fcba4c25ce00c0204">&#9670;&nbsp;</a></span>HttpBodyBuilder< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PocketSaver.Services.ApiSV.HttpBodyBuilder&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method used to create the HttpBody of the POST Api request. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>T is a generic object to be used in the HttpBody</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>T object which will be serialized into a StringContent object.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4db27f4d8526c13b6227e36f40e609e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4db27f4d8526c13b6227e36f40e609e3">&#9670;&nbsp;</a></span>Post< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;T&gt; PocketSaver.Services.ApiSV.Post&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Api POST Request </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Model that the POST Request will map to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>T Object after successfully posting object to the Database.</dd></dl>
+
+</div>
+</div>
+<a id="addfb96abb14d6189ad11040354540e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfb96abb14d6189ad11040354540e08">&#9670;&nbsp;</a></span>Put< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt;T&gt; PocketSaver.Services.ApiSV.Put&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Api PUT Request </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Model that the PUT Request will map to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Object T that is put into the database.</dd></dl>
+
+</div>
+</div>
+<a id="aa5064fcb4a18768820f20c39d75d4d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5064fcb4a18768820f20c39d75d4d44">&#9670;&nbsp;</a></span>QueryBuilder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String PocketSaver.Services.ApiSV.QueryBuilder </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>aggregate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method used to create a query to the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>String for the query parameters to be added to the url.</td></tr>
+    <tr><td class="paramname">aggregate</td><td>String for the aggregate queries to be added to the url.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Final string with all query parameters to the database.</dd></dl>
+
+</div>
+</div>
+<a id="aa770136ecefc3ae66bff6dc75670df45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa770136ecefc3ae66bff6dc75670df45">&#9670;&nbsp;</a></span>UrlBuilder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String PocketSaver.Services.ApiSV.UrlBuilder </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method used to create the URL for the <a class="el" href="class_pocket_saver_1_1_services_1_1_api_s_v.html" title="Class for the Api Service for the entire PocketSaver Application. In this service, GET, POST, PUT, and DELETE Methods are defined in a generic form for whatever Object the Database will return. ">ApiSV</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td>String which is added to the end of the string for additional database queries</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String for the final url.</dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Mevin/PocketSaver/src/PocketSaver/PocketSaver/PocketSaver/Services/ApiSV.cs</li>
 </ul>

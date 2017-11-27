@@ -7,6 +7,9 @@ using Xamarin.Forms;
 
 namespace PocketSaver.Views.Transaction
 {
+    /// <summary>
+    /// Class for the TransactionListCell
+    /// </summary>
     public class TransactionListCell : ViewCell
     {
         //Creating labels within the view cell that can be used and accessed.
@@ -64,6 +67,9 @@ namespace PocketSaver.Views.Transaction
             }
         }
 
+        /// <summary>
+        /// Constructor for the TransactionListCell which initializes all necessary components of the ViewCell
+        /// </summary>
         public TransactionListCell()
         {
             var grid = new Grid

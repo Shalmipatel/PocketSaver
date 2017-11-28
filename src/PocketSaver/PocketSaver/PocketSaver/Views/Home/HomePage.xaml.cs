@@ -1,4 +1,5 @@
-﻿using PocketSaver.ViewModels.HomePage;
+﻿using PocketSaver.Services;
+using PocketSaver.ViewModels.HomePage;
 using PocketSaver.Views.Settings;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,6 @@ namespace PocketSaver.Views.Home
     {
         HomePageViewModel viewModel;
         public static ObservableCollection<String> monthList;
-
 
         public HomePage()
         {
@@ -47,6 +47,7 @@ namespace PocketSaver.Views.Home
                 String amount;
                 if (monthPicker.SelectedIndex != -1)
                 {
+                    viewModel = new HomePageViewModel();
                     switch (monthPicker.SelectedIndex)
                     {
                         case 0:
@@ -144,7 +145,7 @@ namespace PocketSaver.Views.Home
                     break;
                 case 7:
                     currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.julTot;
-                    break; 
+                    break;
                 case 8:
                     currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.augTot;
                     break;
@@ -165,7 +166,7 @@ namespace PocketSaver.Views.Home
                     break;
             }
 
-            budget.Text = SettingsPage.budgetAmount;
+            // budget.Text = SettingsPage.budgetAmount;
             remainingBudget.Text = Convert.ToString(currentMonth);
 
         }

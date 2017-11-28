@@ -15,7 +15,7 @@
             </Grid.ColumnDefinitions>
             <StackLayout>
                 <Label  x:Name="budget" Text="Enter you monthly budget: " Grid.Row="1" Grid.Column="0" />
-                <Entry  x:Name="budgetValue" Text="" Grid.Row="2" Grid.Column="0"/>
+                <Entry  x:Name="budgetValue" Text="" Grid.Row="2" Grid.Column="0" Keyboard="Numeric" />
                 <Button x:Name="Enter" Text="Enter" Clicked="Enter_Clicked" Grid.Row="3" Grid.Column="0" />
                 
             </StackLayout>

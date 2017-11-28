@@ -126,43 +126,43 @@ namespace PocketSaver.Views.Home
             switch (month)
             {
                 case 1:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.janTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.janTot;
                     break;
                 case 2:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.febTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.febTot;
                     break;
                 case 3:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.marTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.marTot;
                     break;
                 case 4:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.aprTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.aprTot;
                     break;
                 case 5:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.mayTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.mayTot;
                     break;
                 case 6:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.junTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.junTot;
                     break;
                 case 7:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.julTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.julTot;
                     break;
                 case 8:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.augTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.augTot;
                     break;
                 case 9:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.sepTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.sepTot;
                     break;
                 case 10:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.octTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.octTot;
                     break;
                 case 11:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.novTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.novTot;
                     break;
                 case 12:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - viewModel.decTot;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - viewModel.decTot;
                     break;
                 default:
-                    currentMonth = Convert.ToDecimal(SettingsPage.budgetAmount) - 0;
+                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - 0;
                     break;
             }
 

@@ -18,13 +18,13 @@ namespace PocketSaver.Views.Home
     {
         HomePageViewModel viewModel;
         public static ObservableCollection<String> monthList;
+        decimal currentMonth;
+        decimal nov;
 
         public HomePage()
         {
             InitializeComponent();
-            //HomePageViewModel.CalcMonth()
-            //viewModel = new HomePageViewModel();
-           // viewModel.CalcMonth();
+
             monthList = new ObservableCollection<string>();
             monthList.Add("Today");
             monthList.Add("January");
@@ -42,16 +42,12 @@ namespace PocketSaver.Views.Home
             monthPicker.Title = "Select a Month";
             monthPicker.ItemsSource = monthList;
 
-            viewModel = new HomePageViewModel();
-            viewModel.CalcMonth();
-
             monthPicker.SelectedIndexChanged += (sender, e) =>
             {
                 String amount;
                 if (monthPicker.SelectedIndex != -1)
                 {
-                    //viewModel = new HomePageViewModel();
-                    //viewModel.CalcMonth();
+
                     switch (monthPicker.SelectedIndex)
                     {
                         case 0:
@@ -99,7 +95,8 @@ namespace PocketSaver.Views.Home
                             Amount.Text = amount;
                             break;
                         case 11:
-                            amount = "$" + Convert.ToString(HomePageViewModel.novTot);
+                            nov = HomePageViewModel.novTot;
+                            amount = "$" + Convert.ToString(nov);
                             Amount.Text = amount;
                             break;
                         case 12:
@@ -115,18 +112,9 @@ namespace PocketSaver.Views.Home
                     }
                 }
             };
-        }
-
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-            //  await HomePageViewModel
-
-            var Label = new Label();
-            monthPicker.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: monthList));
 
             int month = DateTime.Now.Month;
-            decimal currentMonth;
+            
             switch (month)
             {
                 case 1:
@@ -169,10 +157,19 @@ namespace PocketSaver.Views.Home
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - 0;
                     break;
             }
+        }
 
-            // budget.Text = SettingsPage.budgetAmount;
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            
+            viewModel = new HomePageViewModel();
+            viewModel.CalcMonth();
+
+            var Label = new Label();
+            monthPicker.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: monthList));
+
             remainingBudget.Text = Convert.ToString(currentMonth);
-
         }
     }
 }

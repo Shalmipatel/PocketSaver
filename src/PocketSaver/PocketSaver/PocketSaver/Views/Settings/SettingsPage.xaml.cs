@@ -13,7 +13,7 @@ namespace PocketSaver.Views.Settings
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingsPage : ContentPage
 	{
-        private object text;
+        //private object text;
         public static String budgetAmount;
 
         public SettingsPage ()

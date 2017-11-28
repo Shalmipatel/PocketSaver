@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace PocketSaver.Services
 {
-    /// <summary>
-    /// Class used to store string values.
-    /// </summary>
     public static class StorageSV
     {
         private static Plugin.Settings.Abstractions.ISettings AppSettings
@@ -19,16 +16,13 @@ namespace PocketSaver.Services
             }
         }
 
-        //Setting keys and values
-        private const string BudgetKey = "budget_key"; //Key used to get your property
-        private static readonly string BudgetDefault = null; //Default value for your property if the key-value pair has not been created yet
+        private const string BudgetAmountKey = "budgetAmount_key";
+        private static readonly string BudgetAmountDefault = null;
 
-
-        //Setting the strings for each of the constants for the saved values.  
-        public static string Budget
+        public static string BudgetAmount
         {
-            get { return AppSettings.GetValueOrDefault<string>(BudgetKey, BudgetDefault); }
-            set { AppSettings.AddOrUpdateValue<string>(BudgetKey, value); }
+            get { return AppSettings.GetValueOrDefault<string>(BudgetAmountKey, BudgetAmountDefault); }
+            set { AppSettings.AddOrUpdateValue<string>(BudgetAmountKey, value); }
         }
     }
 }

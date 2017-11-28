@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PocketSaver.Models
 {
+    /// <summary>
+    /// Class for the TransactionModel Object to be used throughout the application.
+    /// </summary>
     public class TransactionModel
     {
         public string _id { get; set; }

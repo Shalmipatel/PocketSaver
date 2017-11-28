@@ -8,6 +8,9 @@ using Xamarin.Forms;
 
 namespace PocketSaver.Models
 {
+    /// <summary>
+    /// Class for the MasterPageItem to be used for the MainMenu
+    /// </summary>
     public class MasterPageItem
     {
         public string Title { get; set; }
@@ -16,6 +19,9 @@ namespace PocketSaver.Models
         public Color TintColor { get; set; }
         public Color TextColor { get; set; }
     }
+    /// <summary>
+    /// Class for the GroupedMasterPageItem which holds a list of MasterPageItems
+    /// </summary>
     public class GroupedMasterPageItem : ObservableCollection<MasterPageItem>
     {
         public string LongName { get; set; }

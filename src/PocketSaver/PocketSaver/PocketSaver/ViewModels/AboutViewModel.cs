@@ -4,8 +4,14 @@ using Xamarin.Forms;
 
 namespace PocketSaver.ViewModels
 {
+    /// <summary>
+    /// Class for the AboutViewModel
+    /// </summary>
     public class AboutViewModel : BaseViewModel
     {
+        /// <summary>
+        /// Constructor for the AboutViewModel which creates a web command.
+        /// </summary>
         public AboutViewModel()
         {
             Title = "About";

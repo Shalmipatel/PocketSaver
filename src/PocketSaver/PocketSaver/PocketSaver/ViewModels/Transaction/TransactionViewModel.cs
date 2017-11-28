@@ -11,8 +11,14 @@ using Xamarin.Forms;
 
 namespace PocketSaver.ViewModels.Transaction
 {
+    /// <summary>
+    /// Class for the TransactionViewModel.
+    /// </summary>
     public class TransactionViewModel : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Declaring variables to be used throughout the class
+        /// </summary>
         private bool isRefreshingProperty = true;
         public bool isRefreshing
         {
@@ -24,8 +30,15 @@ namespace PocketSaver.ViewModels.Transaction
             }
         }
 
+        /// <summary>
+        /// Instantiating the observable collection of TransactionModels
+        /// </summary>
         public static ObservableCollection<TransactionModel> transactionDatum = new ObservableCollection<TransactionModel>();
 
+        /// <summary>
+        /// Method used to refresh the transactionList.
+        /// </summary>
+        /// <returns></returns>
         public static async Task RefreshList()
         {
             transactionDatum.Clear();
@@ -38,7 +51,7 @@ namespace PocketSaver.ViewModels.Transaction
                 List<TransactionModel> allData = await sv.Get<List<TransactionModel>>();
 
                 foreach (var x in allData) { transactionDatum.Add(x); }
-            } 
+            }
             catch (Exception ex)
             {
                 await Application.Current.MainPage.DisplayAlert("Could not pull data", Convert.ToString(ex.Message), "OK");
@@ -46,12 +59,13 @@ namespace PocketSaver.ViewModels.Transaction
             }
         }
 
+        /// <summary>
+        /// Declaring the Bindable property for the isRefreshing property.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
         protected void NotifyPropertyChanged(String info)
         {
             PropertyChanged(this, new PropertyChangedEventArgs(info));
         }
-
-
     }
 }

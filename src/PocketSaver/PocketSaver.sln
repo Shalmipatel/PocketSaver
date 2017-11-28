@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketSaver.iOS", "PocketSa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketSaver.UWP", "PocketSaver\PocketSaver.UWP\PocketSaver.UWP.csproj", "{8195E476-A83A-4693-AA93-FF4515F8D5D8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PocketSaverTests", "PocketSaverTests", "{E62750FF-2DE6-4FE7-9FB3-AB4BDE305E44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketSaverTests.UnitTest", "PocketSaverTests.UnitTest\PocketSaverTests.UnitTest.csproj", "{3F301A93-E8EE-4AF0-881C-95FBE8447425}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,8 +131,35 @@ Global
 		{8195E476-A83A-4693-AA93-FF4515F8D5D8}.Release|x86.ActiveCfg = Release|x86
 		{8195E476-A83A-4693-AA93-FF4515F8D5D8}.Release|x86.Build.0 = Release|x86
 		{8195E476-A83A-4693-AA93-FF4515F8D5D8}.Release|x86.Deploy.0 = Release|x86
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|x64.Build.0 = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Debug|x86.Build.0 = Debug|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|ARM.Build.0 = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|iPhone.Build.0 = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|x64.ActiveCfg = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|x64.Build.0 = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|x86.ActiveCfg = Release|Any CPU
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F301A93-E8EE-4AF0-881C-95FBE8447425} = {E62750FF-2DE6-4FE7-9FB3-AB4BDE305E44}
 	EndGlobalSection
 EndGlobal

@@ -27,15 +27,12 @@ namespace PocketSaver.Views.Settings
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-           
-
-            
         }
 
         private void Enter_Clicked(Object sender, EventArgs e )
         {
 
-            budgetAmount = budgetValue.Text;
+            StorageSV.BudgetAmount = budgetValue.Text;
         }
     }
 }

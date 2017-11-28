@@ -9,19 +9,19 @@ namespace PocketSaver.ViewModels.HomePage
 {
     public class HomePageViewModel
     {
-        public decimal janTot;
-        public decimal febTot;
-        public decimal marTot;
-        public decimal aprTot;
-        public decimal mayTot;
-        public decimal junTot;
-        public decimal julTot;
-        public decimal augTot;
-        public decimal sepTot;
-        public decimal octTot;
-        public decimal novTot;
-        public decimal decTot;
-        public decimal dailyTot;
+        public static decimal janTot;
+        public static decimal febTot;
+        public static decimal marTot;
+        public static decimal aprTot;
+        public static decimal mayTot;
+        public static decimal junTot;
+        public static decimal julTot;
+        public static decimal augTot;
+        public static decimal sepTot;
+        public static decimal octTot;
+        public static decimal novTot;
+        public static decimal decTot;
+        public static decimal dailyTot;
 
         public HomePageViewModel()
         {

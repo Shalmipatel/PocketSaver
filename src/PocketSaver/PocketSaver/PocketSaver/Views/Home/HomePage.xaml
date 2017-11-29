@@ -9,18 +9,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <StackLayout>
                 <Label Text="Amount:" />
-                <Label x:Name="Amount" Text="$0.00" Grid.Row="1" Grid.Column="0" FontSize = "10" VerticalTextAlignment="Center"/>
+                <Label x:Name="Amount" Text="$0.00" Grid.Row="1" Grid.Column="0" FontSize = "50" VerticalTextAlignment="Center"/>
                 <Label Text="Select one of the following options:" />
                 <Picker x:Name="monthPicker" HorizontalOptions="FillAndExpand"/>
                 <Label Text="Remaining budget for the month:" />
-                <Label x:Name="remainingBudget" Text="default" Grid.Row="2" Grid.Column="0" FontSize = "10" VerticalTextAlignment="Center"/>
+                <Label x:Name="remainingBudget" Text="default" Grid.Row="2" Grid.Column="0" FontSize = "20" VerticalTextAlignment="Center"/>
                 
             </StackLayout>
             

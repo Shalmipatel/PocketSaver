@@ -119,39 +119,51 @@ namespace PocketSaver.Views.Home
             {
                 case 1:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.janTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 2:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.febTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 3:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.marTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 4:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.aprTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 5:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.mayTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 6:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.junTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 7:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.julTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 8:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.augTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 9:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.sepTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 10:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.octTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 11:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.novTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 case 12:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.decTot;
+                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
                     break;
                 default:
                     currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - 0;
@@ -169,7 +181,7 @@ namespace PocketSaver.Views.Home
             var Label = new Label();
             monthPicker.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: monthList));
 
-            remainingBudget.Text = Convert.ToString(currentMonth);
+            
         }
     }
 }

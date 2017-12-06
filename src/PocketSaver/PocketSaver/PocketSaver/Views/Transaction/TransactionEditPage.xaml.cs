@@ -194,5 +194,9 @@ namespace PocketSaver.Views.Transaction
             saveButton_Clicked(sender, e);
         }
 
+        private void TodayButton_Clicked(object sender, EventArgs e)
+        {
+            dateEntry.Text = String.Format("{0:MM-dd-yyyy}", DateTime.Today);
+        }
     }
 }

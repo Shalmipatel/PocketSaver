@@ -33,6 +33,7 @@
                             <StackLayout Orientation="Horizontal" Padding="2,0">
                                 <Label Text="Date: " TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" Font="16"/>
                                 <Entry x:Name="dateEntry" Placeholder="MM-DD-YYYY" HorizontalOptions="FillAndExpand" Completed="dateEntry_Completed"/>
+                                <Button x:Name="TodayButton" Text="Today" HorizontalOptions="End" Clicked="TodayButton_Clicked" />
                             </StackLayout>
                         </ViewCell>
                         <ViewCell>

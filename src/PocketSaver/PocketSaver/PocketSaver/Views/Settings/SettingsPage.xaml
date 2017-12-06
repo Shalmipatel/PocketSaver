@@ -16,11 +16,18 @@
             </Grid.ColumnDefinitions>
             <StackLayout>
                 <Label  x:Name="budget" Text="Enter you monthly budget: " Grid.Row="1" Grid.Column="0" />
-                <Entry  x:Name="budgetValue" Text="" Grid.Row="2" Grid.Column="0" Keyboard="Numeric" />
+                <Entry  x:Name="budgetValue" Text="" Grid.Row="2" Grid.Column="0" Keyboard="Numeric" Completed="Enter_Clicked" />
                 <Button x:Name="Enter" Text="Enter" Clicked="Enter_Clicked" Grid.Row="3" Grid.Column="0" />
-                <Label x:Name="budgetAmount" Text="No Budget Set" Grid.Row="4" Grid.Column="0" FontSize = "50" VerticalTextAlignment="Center"/>
+                <Label x:Name="budgetAmount" Text="No Budget Set" Grid.Row="4" Grid.Column="0" FontSize = "20" VerticalTextAlignment="Center"/>
                 
             </StackLayout>
+            <ActivityIndicator x:Name="load" Color="DodgerBlue" IsRunning="False" VerticalOptions="FillAndExpand" HorizontalOptions="Center" 
+                               WidthRequest="50" HeightRequest="50" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.33}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.28}"/>
 
         </Grid>
         

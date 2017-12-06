@@ -26,7 +26,7 @@ namespace PocketSaver.Views.Settings
 
             var MyEntry = new Entry { Text = "I am an Entry" };
             var text = MyEntry.Text;
-            budgetAmount.Text = StorageSV.BudgetAmount;
+            budgetAmount.Text = "Current Budget: " + StorageSV.BudgetAmount;
         }
 
         /// <summary>
@@ -38,6 +38,9 @@ namespace PocketSaver.Views.Settings
         {
 
             StorageSV.BudgetAmount = String.Format("{0:f2}", budgetValue.Text);
+            load.IsRunning = true;
+            budgetAmount.Text = "Current Budget: " + StorageSV.BudgetAmount;
+            load.IsRunning = false;
         }
     }
 }

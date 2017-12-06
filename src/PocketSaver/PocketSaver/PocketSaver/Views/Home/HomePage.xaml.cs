@@ -13,22 +13,29 @@ using Xamarin.Forms.Xaml;
 
 namespace PocketSaver.Views.Home
 {
+    /// <summary>
+    /// Class for the HomePage View.
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-        HomePageViewModel viewModel;
+        /// <summary>
+        /// Creating variables to be used in the class.
+        /// </summary>
         public static ObservableCollection<String> monthList;
-        decimal currentMonth;
-        decimal nov;
 
+        /// <summary>
+        /// Constructor for the HomePage View.
+        /// </summary>
         public HomePage()
         {
             InitializeComponent();
 
+            //Populating the picker.
             monthList = new ObservableCollection<string>();
             monthList.Add("Today");
             monthList.Add("January");
-            monthList.Add("Febuary");
+            monthList.Add("February");
             monthList.Add("March");
             monthList.Add("April");
             monthList.Add("May");
@@ -55,7 +62,7 @@ namespace PocketSaver.Views.Home
                             Amount.Text = amount;
                             break;
                         case 1:
-                            amount = "$" + Convert.ToString(HomePageViewModel.janTot);
+                            amount = "$" + String.Format("{0:f2}", Convert.ToString(HomePageViewModel.janTot));
                             Amount.Text = amount;
                             break;
                         case 2:
@@ -95,8 +102,7 @@ namespace PocketSaver.Views.Home
                             Amount.Text = amount;
                             break;
                         case 11:
-                            nov = HomePageViewModel.novTot;
-                            amount = "$" + Convert.ToString(nov);
+                            amount = "$" + Convert.ToString(HomePageViewModel.novTot);
                             Amount.Text = amount;
                             break;
                         case 12:
@@ -106,77 +112,22 @@ namespace PocketSaver.Views.Home
                         default:
                             Amount.Text = "Sorry Invalid Month Entered";
                             break;
-
-
-
                     }
                 }
             };
-
-            int month = DateTime.Now.Month;
-            
-            switch (month)
-            {
-                case 1:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.janTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 2:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.febTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 3:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.marTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 4:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.aprTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 5:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.mayTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 6:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.junTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 7:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.julTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 8:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.augTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 9:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.sepTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 10:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.octTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 11:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.novTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                case 12:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - HomePageViewModel.decTot;
-                    remainingBudget.Text = Convert.ToString("$" + currentMonth);
-                    break;
-                default:
-                    currentMonth = Convert.ToDecimal(StorageSV.BudgetAmount) - 0;
-                    break;
-            }
         }
 
+        /// <summary>
+        /// OnAppearing method that calls ViewModel to prepare totals.
+        /// </summary>
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            
-            viewModel = new HomePageViewModel();
-            viewModel.CalcMonth();
+
+            load.IsRunning = true;
+            await HomePageViewModel.CalcMonth();
+            load.IsRunning = false;
+            remainingBudget.Text = Convert.ToString("$" + HomePageViewModel.currentMonth);
 
             var Label = new Label();
             monthPicker.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: monthList));

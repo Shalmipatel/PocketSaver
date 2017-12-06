@@ -90,7 +90,7 @@ namespace PocketSaver.Views.Transaction
                         await sv.Post<TransactionModel>();
                         load.IsRunning = false;
                         await DisplayAlert("Success!", "New transaction was created!", "OK");
-                        await Navigation.PushAsync(new TransactionListPage());
+                        await Navigation.PopToRootAsync();
                     }
                     catch
                     {
@@ -107,7 +107,7 @@ namespace PocketSaver.Views.Transaction
                         await sv.Put<TransactionModel>();
                         load.IsRunning = false;
                         await DisplayAlert("Success!", "Transaction was edited!", "OK");
-                        await Navigation.PushAsync(new TransactionListPage());
+                        await Navigation.PopToRootAsync();
                     }
                     catch
                     {

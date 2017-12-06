@@ -17,7 +17,7 @@ namespace PocketSaver.Services
         }
 
         private const string BudgetAmountKey = "budgetAmount_key";
-        private static readonly string BudgetAmountDefault = null;
+        private static readonly string BudgetAmountDefault = "0.00";
 
         public static string BudgetAmount
         {

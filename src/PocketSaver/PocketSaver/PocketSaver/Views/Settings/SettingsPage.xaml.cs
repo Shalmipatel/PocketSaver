@@ -16,10 +16,6 @@ namespace PocketSaver.Views.Settings
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingsPage : ContentPage
 	{
-        /// <summary>
-        /// Creating variables to be used in the class.
-        /// </summary>
-        public static String budgetAmount;
 
         /// <summary>
         /// Constructor for the SettingsPage.
@@ -41,6 +37,7 @@ namespace PocketSaver.Views.Settings
         {
 
             StorageSV.BudgetAmount = String.Format("{0:f2}", budgetValue.Text);
+            budgetAmount.Text = StorageSV.BudgetAmount;
         }
     }
 }

@@ -4,7 +4,7 @@
              x:Class="PocketSaver.Views.Settings.SettingsPage"
              Title="Settings">
     <ContentPage.Content>
-        <Grid HorizontalOptions="FillAndExpand">
+        <Grid HorizontalOptions="FillAndExpand" Margin="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -18,6 +18,7 @@
                 <Label  x:Name="budget" Text="Enter you monthly budget: " Grid.Row="1" Grid.Column="0" />
                 <Entry  x:Name="budgetValue" Text="" Grid.Row="2" Grid.Column="0" Keyboard="Numeric" />
                 <Button x:Name="Enter" Text="Enter" Clicked="Enter_Clicked" Grid.Row="3" Grid.Column="0" />
+                <Label x:Name="budgetAmount" Text="No Budget Set" Grid.Row="4" Grid.Column="0" FontSize = "50" VerticalTextAlignment="Center"/>
                 
             </StackLayout>
 

@@ -44,6 +44,18 @@ namespace PocketSaver.ViewModels.HomePage
         {
             //Calling API
             transactionDatum.Clear();
+            janTot = 0.00m;
+            febTot = 0.00m;
+            marTot = 0.00m;
+            aprTot = 0.00m;
+            mayTot = 0.00m;
+            junTot = 0.00m;
+            julTot = 0.00m;
+            augTot = 0.00m;
+            sepTot = 0.00m;
+            octTot = 0.00m;
+            novTot = 0.00m;
+            decTot = 0.00m;
             ApiSV sv = new ApiSV();
 
             sv.url = sv.UrlBuilder(sv.QueryBuilder("{}", "&sort=Date&dir=-1"));

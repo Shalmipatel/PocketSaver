@@ -1,10 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PocketSaver.Views.Settings.SettingsPage">
+             x:Class="PocketSaver.Views.Settings.SettingsPage"
+             Title="Settings">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="This page will be used to configure the settings of the application through a series of switches and options" />
-        </StackLayout>
+        <Grid HorizontalOptions="FillAndExpand" Margin="5,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout>
+                <Label  x:Name="budget" Text="Enter you monthly budget: " Grid.Row="1" Grid.Column="0" />
+                <Entry  x:Name="budgetValue" Text="" Grid.Row="2" Grid.Column="0" Keyboard="Numeric" />
+                <Button x:Name="Enter" Text="Enter" Clicked="Enter_Clicked" Grid.Row="3" Grid.Column="0" />
+                <Label x:Name="budgetAmount" Text="No Budget Set" Grid.Row="4" Grid.Column="0" FontSize = "50" VerticalTextAlignment="Center"/>
+                
+            </StackLayout>
+
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

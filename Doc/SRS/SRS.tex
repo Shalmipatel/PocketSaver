@@ -3,6 +3,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{soul}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -41,7 +42,8 @@ N/A
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 10/6/2017 & 1.0 & Initial document\\
-Date 2 & 1.1 & Notes\\
+\midrule
+12/6/2017 & 1.1 & Rev 1 Submission\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -76,10 +78,10 @@ We are assuming that the user has an Android APK 23 package or iOS 8.0 or greate
 \section{Functional Requirements}
 
 \subsection{The Scope of the Work and the Product}
-PocketSaver is based on the open source project CoCoin found on GitLab. With our project, we would like to improve on CoCoin's UI and make it more user-friendly. Much like CoCoin, this application will have an interactive interface allowing the user to enter and edit the amount of money spent. As the expenses accumulate, the application will allow the user to view the amount of money spent that day, month, year, or even longer. Users will be able to see the patterns in their spending habits by comparing their expenses day to day or month to month.
+PocketSaver is based on the open source project CoCoin found on GitLab. With our project, we would like to improve on CoCoin's UI and make it more user-friendly. Much like CoCoin, this application will have an interactive interface allowing the user to enter and edit the amount of money spent. As the expenses accumulate, the application will allow the user to view the amount of money spent that \textcolor{blue}{ day or month} \textcolor{blue}{ \st{ year, or even longer. Users will be able to see the patterns in their spending habits by comparing their expenses day to day or month to month.}}
 
 \subsubsection{The Context of the Work}
-The main objective of the application is to keep track of the personal finances of the user. A database is required to keep record of transactions entered by the user. When the user wants to input a new purchase the application has to prompt the user and then take that information and store it in the database. Similarly when requested, the application can extract data from the database and present the user with detailed information of their previous finances in the form of a graph.
+The main objective of the application is to keep track of the personal finances of the user. A database is required to keep record of transactions entered by the user. When the user wants to input a new purchase the application has to prompt the user and then take that information and store it in the database. Similarly when requested, the application can extract data from the database and present the user with detailed information of their previous finances \textcolor{blue}{ \st{in the form of a graph}}.
 
 \subsubsection{Work Partitioning}
 This application will be developed by all three members of the team. Since Mevin has the most experience is application development, he will be taking the lead and ensuring that all the backend code is implemented properly. Shalmi will be the leader for the user interface portion of the project. With the help of the rest of the team, she will be paying attention to software qualities such as usability, reliability, and correctness. Diya will ensure that all documentation is kept up-to-date and completed thoroughly and on time. Although there is one leader for each aspect of this project, all members of the team will contribute to the backend, user interface and documentation equally. 
@@ -92,10 +94,10 @@ There are a couple of use case scenarios that we have to consider when developin
      \item Allows the user to enter the amount spent on a transaction
      \item The entered amount must be retained for future reference
    \end{itemize}
-   \item Display Trend of Past Transactions (Graphically)
+   \item Display Trend of Past Transactions\textcolor{blue}{ \st{ (Graphically)}}
    \begin{itemize}
-     \item Allows the user to see all past transactions visually in the form or a graph
-     \item The graph should be adjustable to various time periods and show trends in spending habits.
+     \item Allows the user to see all past transactions visually in the form \textcolor{blue}{\st{of a graph}} of lables in on the homepage.
+     \item \textcolor{blue}{\st{The graph should be adjustable to various time periods and show trends in spending habits.}}
    \end{itemize}
 \end{itemize}
 
@@ -181,15 +183,15 @@ Here are the following off-the-shelf solutions were are going to be using:
      \item Android device/emulator for hosting the application 
      \item GitLab for issue tracking and version control
 	\item Microsoft Unit Test Framework for unit testing 
-	 \item Latex for documentation generation
+	 \item LaTeX for documentation generation
 	\item Visual Studio IDE, to develop application
 
    \end{enumerate}
 
 \subsection{New Problems}
-Current Problem we are facing is with the master detail page and creating a navigation system for the application.
+Current problem we are facing is with the master detail page and creating a navigation system for the application.
 \subsection{Tasks}
-The development cycle we are following is the waterfall cycle. The different tasks that need to complete to make this application successful would include, code, documentations, and unit testing. These categories are now broken up into different times, of when each is due, to stay on track. The application will be tested through several testcases, testing all features. Please refer to the \href{run:../../ProjectSchedule/Team 12 Gantt Chart.gan}{Gantt Chart} or details on the deadlines, etc.
+The development cycle we are following is the \textcolor{blue}{\st{waterfall cycle}} incremental cycle. The different tasks that need to complete to make this application successful would include, code, documentations, and unit testing. These categories are now broken up into different times, of when each is due, to stay on track. The application will be tested through several testcases, testing all features. Please refer to the \href{run:../../ProjectSchedule/Team 12 Gantt Chart.gan}{Gantt Chart} or details on the deadlines, etc.
 \subsection{Migration to the New Product}
 The migration to the new product, is mostly on the UI. At the moment, CoCoin has many flaws within the UI. The improvements would include better flow, layout, outputs, and input changes. 
 \subsection{Risks}

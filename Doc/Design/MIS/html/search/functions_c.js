@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['transactiondetail',['TransactionDetail',['../class_pocket_saver_1_1_views_1_1_transaction_1_1_transaction_detail.html#a3071272e4982e10b355f107097023f90',1,'PocketSaver::Views::Transaction::TransactionDetail']]],
-  ['transactioneditpage',['TransactionEditPage',['../class_pocket_saver_1_1_views_1_1_transaction_1_1_transaction_edit_page.html#a6e4aa411cc567c67418fdc425e574551',1,'PocketSaver.Views.Transaction.TransactionEditPage.TransactionEditPage()'],['../class_pocket_saver_1_1_views_1_1_transaction_1_1_transaction_edit_page.html#a919496a1e0b09b26162d89918b2fe9f6',1,'PocketSaver.Views.Transaction.TransactionEditPage.TransactionEditPage(string tId, string category, string comment, DateTime date, Decimal purchaseAmount)']]],
-  ['transactionlistcell',['TransactionListCell',['../class_pocket_saver_1_1_views_1_1_transaction_1_1_transaction_list_cell.html#a26039352cfde76eb1bca9b6c2141fae1',1,'PocketSaver::Views::Transaction::TransactionListCell']]],
-  ['transactionlistpage',['TransactionListPage',['../class_pocket_saver_1_1_views_1_1_transaction_1_1_transaction_list_page.html#ac38869636ca8f6dc89b37145bb838733',1,'PocketSaver::Views::Transaction::TransactionListPage']]]
+  ['setproperty_3c_20t_20_3e',['SetProperty&lt; T &gt;',['../class_pocket_saver_1_1_helpers_1_1_observable_object.html#a0145f769ef5ed27c8031a768a0f9f53f',1,'PocketSaver::Helpers::ObservableObject']]],
+  ['settingspage',['SettingsPage',['../class_pocket_saver_1_1_views_1_1_settings_1_1_settings_page.html#a14d3be3fc03e6f84aaa08ee172bd3c3a',1,'PocketSaver::Views::Settings::SettingsPage']]]
 ];

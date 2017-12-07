@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['helpers',['Helpers',['../namespace_pocket_saver_1_1_helpers.html',1,'PocketSaver']]],
-  ['home',['Home',['../namespace_pocket_saver_1_1_views_1_1_home.html',1,'PocketSaver::Views']]],
-  ['models',['Models',['../namespace_pocket_saver_1_1_models.html',1,'PocketSaver.Models'],['../namespace_pocket_saver_1_1_services_1_1_models.html',1,'PocketSaver.Services.Models']]],
-  ['pageactivityindicator',['PageActivityIndicator',['../class_pocket_saver_1_1_views_1_1_shared_1_1_page_activity_indicator.html',1,'PocketSaver::Views::Shared']]],
-  ['pocketsaver',['PocketSaver',['../namespace_pocket_saver.html',1,'']]],
-  ['post_3c_20t_20_3e',['Post&lt; T &gt;',['../class_pocket_saver_1_1_services_1_1_api_s_v.html#a4db27f4d8526c13b6227e36f40e609e3',1,'PocketSaver::Services::ApiSV']]],
-  ['propertychanged',['PropertyChanged',['../class_pocket_saver_1_1_helpers_1_1_observable_object.html#a5bec60ddca9a88a38affe84844c2f16d',1,'PocketSaver.Helpers.ObservableObject.PropertyChanged()'],['../class_pocket_saver_1_1_view_models_1_1_transaction_1_1_transaction_view_model.html#a258c2b7249a3e23d71d6669ef91d46bd',1,'PocketSaver.ViewModels.Transaction.TransactionViewModel.PropertyChanged()']]],
-  ['put_3c_20t_20_3e',['Put&lt; T &gt;',['../class_pocket_saver_1_1_services_1_1_api_s_v.html#addfb96abb14d6189ad11040354540e08',1,'PocketSaver::Services::ApiSV']]],
-  ['services',['Services',['../namespace_pocket_saver_1_1_services.html',1,'PocketSaver']]],
-  ['settings',['Settings',['../namespace_pocket_saver_1_1_views_1_1_settings.html',1,'PocketSaver::Views']]],
-  ['shared',['Shared',['../namespace_pocket_saver_1_1_views_1_1_shared.html',1,'PocketSaver::Views']]],
-  ['transaction',['Transaction',['../namespace_pocket_saver_1_1_view_models_1_1_transaction.html',1,'PocketSaver.ViewModels.Transaction'],['../namespace_pocket_saver_1_1_views_1_1_transaction.html',1,'PocketSaver.Views.Transaction']]],
-  ['viewmodels',['ViewModels',['../namespace_pocket_saver_1_1_view_models.html',1,'PocketSaver']]],
-  ['views',['Views',['../namespace_pocket_saver_1_1_views.html',1,'PocketSaver']]]
+  ['observableobject',['ObservableObject',['../class_pocket_saver_1_1_helpers_1_1_observable_object.html',1,'PocketSaver::Helpers']]],
+  ['observablerangecollection',['ObservableRangeCollection',['../class_pocket_saver_1_1_helpers_1_1_observable_range_collection.html',1,'PocketSaver.Helpers.ObservableRangeCollection&lt; T &gt;'],['../class_pocket_saver_1_1_helpers_1_1_observable_range_collection.html#a4d5992476c0c7143f8494dac1ab67b62',1,'PocketSaver.Helpers.ObservableRangeCollection.ObservableRangeCollection()'],['../class_pocket_saver_1_1_helpers_1_1_observable_range_collection.html#a20abe6e4757c17478a850e16bf32c28c',1,'PocketSaver.Helpers.ObservableRangeCollection.ObservableRangeCollection(IEnumerable&lt; T &gt; collection)']]],
+  ['onappearing',['OnAppearing',['../class_pocket_saver_1_1_views_1_1_home_1_1_home_page.html#a47aecb7aa46d3e9e22867599a254b478',1,'PocketSaver.Views.Home.HomePage.OnAppearing()'],['../class_pocket_saver_1_1_views_1_1_transaction_1_1_transaction_list_page.html#a8af1a929634ca8eb26dadd56d6d02fc4',1,'PocketSaver.Views.Transaction.TransactionListPage.OnAppearing()']]],
+  ['oncompleted',['OnCompleted',['../class_pocket_saver_1_1_helpers_1_1_messaging_center_alert.html#a0c4bc9d96c3b04c593f24aec403742b4',1,'PocketSaver::Helpers::MessagingCenterAlert']]],
+  ['onpropertychanged',['OnPropertyChanged',['../class_pocket_saver_1_1_helpers_1_1_observable_object.html#a3abc90b0599e021e2fd979a0cbff889c',1,'PocketSaver::Helpers::ObservableObject']]],
+  ['openwebcommand',['OpenWebCommand',['../class_pocket_saver_1_1_view_models_1_1_about_view_model.html#a05bca2ba82a3e0d0b231d177f3990e66',1,'PocketSaver::ViewModels::AboutViewModel']]]
 ];

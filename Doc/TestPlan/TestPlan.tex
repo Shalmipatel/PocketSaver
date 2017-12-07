@@ -150,6 +150,34 @@ Output/Result: Deleted transaction should not appear within database
 \newline
 How test will be performed: When user deletes an existing transaction the database should update and correspondingly delete that entry. We will use unit testing to ensure the data in the database matching the deleted transaction is removed.
 
+\item{Set monthly budget}
+\newline
+inputTest-id4 : Testing if user can set monthly budget
+\newline
+Type: Functional, Dynamic, manual
+\newline
+Initial State: no budget set
+\newline
+Input/Condition: User enters a numerical value
+\newline
+Output/Result: budget set, StorageSV is updated
+\newline
+How test will be performed: THhe user will enter a budget and that will then subtract the current months expenses, and give an output on the mainpage.
+
+\item{View monthly expenses}
+\newline
+inputTest-id5 : Select month to view expenses.
+\newline
+Type: Functional, Dynamic, manual 
+\newline
+Initial State: 'select one of the following options' is displayed 
+\newline
+Input/Condition: User selects month
+\newline
+Output/Result: Month's total expense is displayed
+\newline
+How test will be performed: The user is will select a month from the drop down menu, and the output should display that month total expense.
+
 
 \end{enumerate}
 
@@ -193,6 +221,34 @@ Input/Condition: User enters a new transaction
 Output/Result: Entered transaction should appear in database
 \newline
 How test will be performed: When user enters a new transaction the transaction page should update and should have accurate data.  We will use unit testing to view the transaction page manually and ensure that the inputted information is accurately displayed and without delay.
+
+\item{View daily expenses}
+\newline
+outputTest-id3 : Display current days' expenses
+\newline
+Type: Functional, Dynamic, Manual 
+\newline
+Initial State: 'select one of the following options' is displayed 
+\newline
+Input/Condition: User selects 'Daily'
+\newline
+Output/Result: 'Daily' total expense is displayed
+\newline
+How test will be performed: The user is will select 'daily' from the drop down menu, and the output should display 'daily' total expense.
+
+\item{Display current budget}
+\newline
+outputTest-id4 : Display current budget
+\newline
+Type: Functional, Dynamic, Manual 
+\newline
+Initial State: No budget is entered
+\newline
+Input/Condition: User inputed numerical value into textbox
+\newline
+Output/Result: Inputted budget value should be shown to user
+\newline
+How test will be performed: The user will input a value and that value will be returned back to them, on screen.
 
 \end{enumerate}
 

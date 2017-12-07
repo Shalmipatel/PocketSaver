@@ -86,7 +86,6 @@
     <Compile Include="Views\Settings\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Shared\PageActivityIndicator.cs" />
     <Compile Include="Views\Shared\TintedImage.cs" />
     <Compile Include="Views\Transaction\TransactionDetail.xaml.cs">
       <DependentUpon>TransactionDetail.xaml</DependentUpon>

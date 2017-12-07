@@ -35,7 +35,7 @@ namespace PocketSaverTests.UnitTest
         public async System.Threading.Tasks.Task TestRemainingBudget()
         {
             await HomePageViewModel.CalcMonth();
-            Assert.IsTrue(Decimal.Compare(HomePageViewModel.currentMonth, Convert.ToDecimal(923.75)) < 0);
+            Assert.IsTrue(Decimal.Compare(HomePageViewModel.currentMonth, Convert.ToDecimal(925.00)) < 0);
 
         }
     }

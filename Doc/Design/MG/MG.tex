@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{soul}
+
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -165,11 +167,11 @@ actually be implemented.
 \begin{description}
 \item [\refstepcounter{mnum} \mthemnum \label{m1}:] CustomImageCell Module
 \item [\refstepcounter{mnum} \mthemnum \label{m2}:] Transaction Model Module
-\item [\refstepcounter{mnum} \mthemnum \label{m3}:] ApiSV Module
+\item [\refstepcounter{mnum} \mthemnum \label{m3}:] ApiSV \textcolor{blue}{\st{Module}} model
 \item [\refstepcounter{mnum} \mthemnum \label{m4}:] HomePage ViewModel Module
 \item [\refstepcounter{mnum} \mthemnum \label{m5}:] TransactionPage ViewModel Module
-\item [\refstepcounter{mnum} \mthemnum \label{m6}:] SettingsPage ViewModel Module
-\item [\refstepcounter{mnum} \mthemnum \label{m7}:] PageActivityIndicator Module
+\item [\refstepcounter{mnum} \mthemnum \label{m6}:] \textcolor{blue}{\st{ SettingsPage ViewModel Module}}
+\item [\refstepcounter{mnum} \mthemnum \label{m7}:] \textcolor{blue}{\st{ PageActivityIndicator Module}}
 \item [\refstepcounter{mnum} \mthemnum \label{m8}:] TintedImage Module
 \item [\refstepcounter{mnum} \mthemnum \label{m9}:] TransactionListCell Module
 \item [\refstepcounter{mnum} \mthemnum \label{m10}:] TransactionListPage
@@ -179,6 +181,8 @@ actually be implemented.
 \item [\refstepcounter{mnum} \mthemnum \label{m14}:] MasterPageItem Module
 \item [\refstepcounter{mnum} \mthemnum \label{m15}:] MainMasterDetailPage Module
 \item [\refstepcounter{mnum} \mthemnum \label{m16}:] MainMenuPage Module
+\item [\refstepcounter{mnum} \mthemnum \label{m17}:]\textcolor{blue}{StorageSV model}
+
 \end{description}
 
 
@@ -244,35 +248,35 @@ selected.
 \subsection{Hardware Hiding Modules}
 \subsubsection{CustomImageCell Module(\mref{m1})}
 \begin{description}
-\item[Secrets:]Get colours from module
+\item[Secrets:] \textcolor{blue}{\st{Get}}Colours from module
 \item[Services:]Allows custom cells to have tinted images
 \item[Implemented By:] CustomImageCell.cs
 \end{description}
 
 \subsubsection{TintedImage Module(\mref{m7})}
 \begin{description}
-\item[Secrets:]Get colours from module
+\item[Secrets:]\textcolor{blue}{\st{Get}} Colours from module
 \item[Services:]A custom image that allows for image colour tinting for the main menu images and various other pages
 \item[Implemented By:] TintedImage.cs
 \end{description}
 
 \subsubsection{GroupedMasterPageItem Module(\mref{m13})}
 \begin{description}
-\item[Secrets:]How the MasterPageItem is grouped together
+\item[Secrets:] \textcolor{blue}{\st{How the MasterPageItem is grouped together}} MasterPageItem grouped layout
 \item[Services:]Groups the items in the master page into Modules for the MainMenuPage list
 \item[Implemented By:] GroupedMasterPageItem.cs
 \end{description}
 
 \subsubsection{MasterPageItem Module(\mref{m14})}
 \begin{description}
-\item[Secrets:]How each page is created for each view
+\item[Secrets:] How each page is created for each view
 \item[Services:]Determines the instances of pages to be loaded upon user selection
 \item[Implemented By:] MasterPageItem.cs
 \end{description}
 
 \subsubsection{MainMasterDetailPage Module(\mref{m15})}
 \begin{description}
-\item[Secrets:]How the navigation flows from page to page using MasterDetail layout
+\item[Secrets:]\textcolor{blue}{\st{How the}} Navigation flows from page to page using MasterDetail layout
 \item[Services:]Displays the master detail format for the pages of the application
 Module that creates an instance of a master detail format for the pages
 \item[Implemented By:]  MainMasterDetailPage.xaml, MainMasterDetailPage.cs
@@ -280,15 +284,15 @@ Module that creates an instance of a master detail format for the pages
 
 \subsubsection{MainMenuPage Module(\mref{m16})}
 \begin{description}
-\item[Secrets:]How the MainMenu is laid out
+\item[Secrets:] \textcolor{blue}{\st{How the MainMenu is laid out}} \textcolor{blue}{ Layout of the MainMenu}
 \item[Services:]Module that displays the list of all pages within the application
 \item[Implemented By:] MainMenuPage.xaml, MainMenuPage.cs
 \end{description}
 
 \subsection{Behaviour-Hiding Module}
-\subsubsection{ApiSV Module(\mref{m3})}
+\subsubsection{ApiSV Model(\mref{m3})}
 \begin{description}
-\item[Secrets:] How the GET and POST requests are made
+\item[Secrets:] \textcolor{blue}{\st{How the GET and POST requests are made}}\textcolor{blue}{GET and POST requests}
 \item[Services:] API Service that allows the application to use GET and POST requests to retrieve and add data to the online database
 \item[Implemented By:] ApiSV.cs
 \end{description}
@@ -307,7 +311,7 @@ Module that creates an instance of a master detail format for the pages
 \item[Implemented By:] TransactionViewModel.cs
 \end{description}
 
-\subsubsection{SettingsPage ViewModel Modulee(\mref{m6})}
+\subsubsection{StroageSV Model(\mref{m6})}
 \begin{description}
 \item[Secrets:] Data Retrieval from the ApiSV
 \item[Services:] Saves any local settings created by the user to be used for the SettingsPage view
@@ -323,7 +327,7 @@ Module that creates an instance of a master detail format for the pages
 
 \subsubsection{TransactionListPage Module (\mref{m10})} 
 \begin{description} 
-\item[Secrets:] How the data is displayed from the Transaction ViewModel 
+\item[Secrets:] The data \textcolor{blue}{\st{is displayed}} \textcolor{blue}{received} from the Transaction ViewModel 
 \item[Services:] Displaying the data from the TransactionViewModel onto the UI View for the user
 \item[Implemented By:] TransactionListPage.xaml, TransactionListPage.cs 
 \end{description}
@@ -337,7 +341,7 @@ Module that creates an instance of a master detail format for the pages
 
 \subsubsection{HomePage Module (\mref{m12})} 
 \begin{description}
-\item[Secrets:] How data is displayed from the HomePageViewModel to the UI view
+\item[Secrets:] Data \textcolor{blue}{\st{is displayed}} \textcolor{blue}{received} from the HomePageViewModel to the UI view
 \item[Services:] Displays the data from the HomePageViewModel to the UI View for the user
 \item[Implemented By:] HomePage.xaml, HomePage.cs 
 \end{description}
@@ -400,7 +404,6 @@ because they use modules from the lower levels.
 \label{FigUH}
 \end{figure}
 
-\section*{References}
 
 \bibliographystyle {plainnat}
 \bibliography {MG}

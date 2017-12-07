@@ -31,7 +31,7 @@ namespace PocketSaver.ViewModels.HomePage
         public static decimal octTot = 0.00m;
         public static decimal novTot = 0.00m;
         public static decimal decTot = 0.00m; 
-        public static decimal dailyTot;
+        public static decimal dailyTot = 0.00m;
         public static decimal currentMonth;
 
         public static ObservableCollection<TransactionModel> transactionDatum = new ObservableCollection<TransactionModel>();
@@ -56,6 +56,7 @@ namespace PocketSaver.ViewModels.HomePage
             octTot = 0.00m;
             novTot = 0.00m;
             decTot = 0.00m;
+            dailyTot = 0.00m;
             ApiSV sv = new ApiSV();
 
             sv.url = sv.UrlBuilder(sv.QueryBuilder("{}", "&sort=Date&dir=-1"));

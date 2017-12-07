@@ -139,7 +139,7 @@ namespace PocketSaver.Views.Transaction
                         await sv.Delete<TransactionModel>();
                         load.IsRunning = false;
                         await DisplayAlert("Success!", "Transaction was deleted!", "OK");
-                        await Navigation.PushAsync(new TransactionListPage());
+                        await Navigation.PopToRootAsync();
                     }
                     catch
                     {

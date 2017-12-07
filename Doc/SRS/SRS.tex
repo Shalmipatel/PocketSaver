@@ -3,7 +3,53 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
 \usepackage{soul}
+
+\pagestyle{fancy}
+
+\newcounter{funreq}
+\newcommand{\frthefunreq}{FR\thefunreq}
+\newcommand{\aref}[1]{FR\ref{#1}}
+
+\newcounter{lfreq}
+\newcommand{\lfthelfreq}{LF\thelfreq}
+\newcommand{\bref}[1]{LF\ref{#1}}
+
+\newcounter{uhreq}
+\newcommand{\uhtheuhreq}{UH\theuhreq}
+\newcommand{\cref}[1]{UH\ref{#1}}
+
+\newcounter{perreq}
+\newcommand{\pertheperreq}{PR\theperreq}
+\newcommand{\dref}[1]{PR\ref{#1}}
+
+\newcounter{oereq}
+\newcommand{\oetheoereq}{OE\theoereq}
+\newcommand{\eref}[1]{OE\ref{#1}}
+
+\newcounter{msreq}
+\newcommand{\msthemsreq}{MS\themsreq}
+\newcommand{\fref}[1]{MS\ref{#1}}
+
+\newcounter{secreq}
+\newcommand{\sethesecreq}{SE\thesecreq}
+\newcommand{\gref}[1]{SE\ref{#1}}
+
+\newcounter{culreq}
+\newcommand{\cultheculreq}{CU\theculreq}
+\newcommand{\iref}[1]{CU\ref{#1}}
+
+\newcounter{legreq}
+\newcommand{\legthelegreq}{LE\thelegreq}
+\newcommand{\jref}[1]{LE\ref{#1}}
+
+\newcounter{hsreq}
+\newcommand{\hsthehsreq}{HS\thehsreq}
+\newcommand{\kref}[1]{HS\ref{#1}}
+
+
+
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -121,54 +167,61 @@ There are a couple of use case scenarios that would make the application user-fr
 
 \subsection{Functional Requirements}
    \begin{enumerate}
-     \item The application will allow the user to input and delete transactions on a past or current day
-     \item The application will allow the user to view previous transactions and view the trend of their previous transactions
-     \item  The application will allow the user to edit previous transactions
-     \item The application will record all inputs by the user on a database
+     \item [\refstepcounter{funreq} \frthefunreq:] The application will allow the user to input transactions on a past or current day
+	\item [\refstepcounter{funreq} \frthefunreq:]  The application will allow the user to delete transactions from a past of current day.
+     \item  [\refstepcounter{funreq} \frthefunreq:]  The application will allow the user to view previous transactions \textcolor{blue}{\st{ and view the trend of their previous transactions}}
+     \item  [\refstepcounter{funreq} \frthefunreq:]  The application will allow the user to edit previous transactions
+     \item[\refstepcounter{funreq} \frthefunreq:]  The application will record all inputs by the user on a database
+    \textcolor{blue}{ 
+\item [\refstepcounter{funreq} \frthefunreq:]  The application will display the budget the user inputs, on page
+	\item [\refstepcounter{funreq} \frthefunreq:]  The application will allow users to set a monthly budget
+\item [\refstepcounter{funreq} \frthefunreq:]  The application will display the budget the user inputs, on page
+\item [\refstepcounter{funreq} \frthefunreq:]  The application will disply the current day's expense
+\item [\refstepcounter{funreq} \frthefunreq:]  The application will allow user to pick a month, to view thier expensives}
    \end{enumerate}
 
 \section{Non-functional Requirements}
 
 \subsection{Look and Feel Requirements}
    \begin{enumerate}
-   \item The application should have a clean user interface
+   \item [\refstepcounter{lfreq} \lfthelfreq:] The application should have a clean user interface
    \begin{itemize}
      \item This will make the navigation in the application for users to understand. With an appealing colour scheme, etc.
    \end{itemize}
 
-   \item The application should run smoothly
+   \item [\refstepcounter{lfreq} \lfthelfreq:]The application should run smoothly
    \begin{itemize}
      \item The application should run smoothly, with minimal wait/loading times. 
    \end{itemize}
 \end{enumerate}
 \subsection{Usability and Humanity Requirements}
    \begin{enumerate}
-   \item The application must be easy to use and easy to navigate
+   \item[\refstepcounter{uhreq} \uhtheuhreq:]  The application must be easy to use and easy to navigate
    \begin{itemize}
      \item 90\% of users should be able to find all functions of the application without help. The layout will be easy to understand, which will allow the user to navigate through the application.
    \end{itemize}
  \end{enumerate}
 \subsection{Performance Requirements}
-All recent transactions or edits of previous transactions should be reflected on the graph with no delay
+\textcolor{blue}{\st{All recent transactions or edits of previous transactions should be reflected on the graph with no delay}}
 
 \subsection{Operational and Environmental Requirements}
    \begin{enumerate}
-     \item The application should not take up too much storage space on a phone
-     \item The application works on both Android and iOS
+     \item [\refstepcounter{oereq} \oetheoereq:]  The application should not take up too much storage space on a phone
+     \item  [\refstepcounter{oereq} \oetheoereq:] The application works on both Android and iOS
    \end{enumerate}
 
 \subsection{Maintainability and Support Requirements}
-If the application crashes, none of the data should be lost
+ [\refstepcounter{msreq} \msthemsreq:] If the application crashes, none of the data should be lost
 
 \subsection{Security Requirements}
    \begin{enumerate}
-     \item The application will only store all information collected from the user on the users device 
-     \item The application will not require the user to enter any sensitive information (like credit card information etc.)
+     \item [\refstepcounter{secreq} \sethesecreq:] The application will only store all information collected from the user on \textcolor{blue}{\st{ the users device}} \textcolor{blue}{ on Rest.db.io a database site.} 
+     \item [\refstepcounter{secreq} \sethesecreq:] The application will not require the user to enter any sensitive information (like credit card information etc.)
    \end{enumerate}
 \subsection{Cultural Requirements}
 N/A
 \subsection{Legal Requirements}
- The application is suitable for all ages, but targets those who are old enough to go shopping on their own
+[\refstepcounter{legreq} \legthelegreq:]   The application is suitable for all ages, but targets those who are old enough to go shopping on their own
 \subsection{Health and Safety Requirements}
 N/A
 
